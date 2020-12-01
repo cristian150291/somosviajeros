@@ -1,0 +1,115 @@
+<!-- MENU LOGIN -->
+<app-NavBar
+	[isEmp]='IamEmpresa'
+></app-NavBar>
+<div  class="ctn-header-emp">
+    <div class="img-header-emp"></div>
+    <div class="btn-header">
+        <button (click)="homeUser()" class="btn-header-via">{{"Btn-via" | translate}}</button>      
+    </div>
+
+    <div class="title-input-ctn-emp">
+        <div class="title-ctn-emp">
+            <h2 class="title-gral-emp">{{'Login-emp.parte1' | translate}}
+                {{'Login-emp.parte2' | translate}}</h2>
+        </div>
+    </div>
+      
+</div>
+<form action="" class="form-ctn" name="loginForm" #loginForm="ngForm"  (ngSubmit)="onSubmit(loginForm)">
+    <div class="title-ctn">
+        <h3 class="form-title">{{"Login-title" | translate}}</h3>
+    </div>
+    <div class="inputs-ctn">      
+        <div class="input-ctn">
+            <input type="email" name="email" class="input" id="email" #email="ngModel" [(ngModel)]="login.email" 
+            placeholder="{{'Login-mail' | translate}}" required> 
+        </div>
+        <div class="input-ctn">
+            <input type="password" name="pass" class="input password" id="pass" #pass="ngModel" [(ngModel)]="login.pass" 
+            placeholder="{{'Login-pass' | translate}}" required> 
+        </div> 
+                           
+        <div class="btn-ctn">
+            <button type="submit" class="inicio" [disabled]="!loginForm.form.valid">{{"Login-btns.btn1" | translate}}</button>
+            <span class="sub-title" (click)="OlvPassword()" >{{"Login-btns.btn2" | translate}}</span>
+            <button type="button" class="registrarse" (click)="onRegister()">{{"Login-btns.btn3" | translate}}</button>
+            <button type="button" class="login-rs Goo" (click)="signInWithGoogle()"><div  class="logo-rs ico-goo"></div> <span class="texto-rs">{{"Login-btns.btn4" | translate}}</span></button>
+            <button type="button" class="login-rs FB" (click)="signInWithFB()"><div  class="logo-rs ico-fb"></div> <span class="texto-rs">{{"Login-btns.btn5" | translate}}</span> </button>
+        </div>
+    </div>    
+</form>
+<!-- COMPONENTES DE INFORMACION -->
+<div class="info-ctn bacco-white">
+    <div class="info-title-ctn2">
+        <h3 class="info-title2">{{'Login-emp-encontra.Title' | translate}}</h3>
+    </div>
+    <div class="info-text-ctn">
+        <p class="info-text">{{'Login-emp-encontra.parte1' | translate}}<br>
+            {{'Login-emp-encontra.parte2' | translate}} <br>
+            {{'Login-emp-encontra.parte3' | translate}} <br>
+            {{'Login-emp-encontra.parte4' | translate}}</p>
+    </div>
+  
+    <div class="cajas"></div>
+    
+  </div>
+  
+  <div class="info-ctn">
+    <div class="info-title-ctn2">
+        <h3 class="info-title2">{{'Login-emp-decision.Title' | translate}}</h3>
+    </div>
+    <div class="info-text-ctn">
+        <p class="info-text">{{'Login-emp-decision.parte1' | translate}} <br>
+            {{'Login-emp-decision.parte2' | translate}} <br>
+            {{'Login-emp-decision.parte3' | translate}} <br>
+            {{'Login-emp-decision.parte4' | translate}} </p>
+    </div>    
+    <div class="cajas"></div>
+  </div>
+  <div class="info-ctn bacco-cl-ter">
+    <div class="info-title-ctn2">
+        <h3 class="info-title2">{{'Login-emp-puntos.Title1' | translate}} <br>
+            {{'Login-emp-puntos.Title2' | translate}} </h3>
+    </div>
+    <div class="info-text-ctn">
+        <p class="info-text">{{'Login-emp-puntos.parte1' | translate}}  <br>
+            {{'Login-emp-puntos.parte2' | translate}} <br>
+            {{'Login-emp-puntos.parte3' | translate}} <br>
+            {{'Login-emp-puntos.parte4' | translate}} </p>
+    </div>
+    <div class="cajas"></div>
+  </div>
+  <!-- FOOTER -->
+  <div class="reg-ctn">
+    <p class="text-reg">{{'Login-emp-text.parte1' | translate}} <br>
+        {{'Login-emp-text.parte2' | translate}} <br>
+        {{'Login-emp-text.parte3' | translate}} <br>
+        {{'Login-emp-text.parte4' | translate}} <br>
+        {{'Login-emp-text.parte5' | translate}}</p>    
+    <button class="btn-reg" >{{'Login-emp-text.Btn' | translate}}</button>
+  </div>
+<!-- FOOTER -->
+<app-footer></app-footer>
+
+<!-- TODAVIA SE DENE SOLUCIONAR COMO LEVVANTAR EL MODAL DESDE UN ELSE, PARA PODER RECIBIR EL #alertMarker -->
+<ng-template #alerMarker let-modal >
+    <div class="modal-ctn-padre">
+        <div class="modal-ctn">
+            <h2 class="modal-logo">Roddapp</h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeAlert()"></button>
+        </div>
+        <div class="m-top"></div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{ msgError }}</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-acep" (click)="closeAlert()">{{"Modal.acep" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+

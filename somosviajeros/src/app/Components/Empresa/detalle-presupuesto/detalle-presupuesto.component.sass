@@ -1,0 +1,200 @@
+@import "src/variables"
+
+.det-map-ctn
+  width: 100%
+  height: 15rem
+
+
+agm-map
+  width: 100%
+  height: 100%
+  z-index: 50
+
+.det-card-ctn
+  width: 90%
+  background-color: $cl-white
+  @include df()
+  margin-left: 5%
+  margin-top: -2rem
+  margin-bottom: 2.5rem
+
+.det-title-ctn
+  width: 100%
+  padding-left: 1rem
+  font-family: $ft-prin
+  z-index: 150
+  background-color: $cl-white
+  margin-bottom: 1rem
+  padding-top: 1rem
+
+.det-title
+  font-size: 1.4rem
+  font-weight: bold
+  padding-bottom: .02rem
+
+.det-subtitle
+  font-size: .8rem
+  color: $cl-gray
+
+.det-gral-ctn
+  width: 100%
+
+.det-etiq-ctn, .det-itin-card-title-ctn
+  width: 50%
+  height: 2rem
+  background-color: $cl-ter
+  @include df(row)
+  margin-bottom: 1rem
+
+.det-itin-card-title-ctn
+  justify-content: space-around
+
+.det-title1, .det-title2, .det-itin-card-title
+  font-size: .75rem
+  margin: 0
+  color: $cl-gray
+  font-weight: bold
+
+.det-sep
+  width: 100%
+  border-top: 1px solid $cl-ter
+  margin-bottom: 1rem
+
+.det-info2-ctn
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 0 1rem
+  margin-bottom: 1rem
+
+.det-info2-title
+  font-size: 1.3rem
+  margin: 0 0 .2rem
+  font-family: $ft-prin
+  font-weight: bold
+
+.det-info2-subtitle
+  font-size: .75rem
+  font-family: $ft-prin
+  color: $cl-gray
+
+.det-info3-ctn
+  width: 100%
+  padding: 0 1rem
+  margin-bottom: 1rem
+
+.det-info4-ctn
+  @include df(row,space-between)
+  padding: 0 1rem
+
+
+.det-notas-ctn, .det-itin-ctn
+  width: 100%
+  padding: 0 1rem
+  margin: 1.5rem 0
+
+.det-notas-title, .det-itin-title
+  font-size: 1.2rem
+  font-family: $ft-prin
+  font-weight: bold
+
+.det-notas-p-ctn
+  margin: 1rem 0
+  background-color: $cl-white
+  padding: 1rem
+
+.det-notas-p
+  font-family: $ft-prin
+  font-size: .9rem
+
+.det-itin-card
+  width: 100%
+  background-color: $cl-white
+  margin-top: 1rem
+
+.det-itin-info-ctn
+  padding-left: 1rem
+
+.det-itin-fecha
+  font-size: .8rem
+  font-family: $ft-prin
+  color: $cl-gray
+  margin-bottom: 1rem
+  padding-left: 1rem
+
+.det-itin-info-city
+  font-family: $ft-prin
+  font-size: .8rem
+  margin: 0
+  font-weight: bold
+
+.det-itin-info-cant
+  font-family: $ft-prin
+  font-size: .8rem
+  color: $cl-gray
+
+.det-itin-info-ctn
+  width: 100%
+  @include df(row,flex-start,flex-start)
+  padding: 0 0 1rem .5rem
+  margin-bottom: .7rem
+
+.iconos-ctn
+  margin-top: 2px
+  padding-right: .5rem
+
+.det-itin-info-mas-ctn
+  display: flex
+  align-items: center
+  padding-bottom: 1rem
+  margin-top: 1rem
+
+.det-itin-info-mas
+  font-family: $ft-prin
+  font-size: .8rem
+  color: aqua
+  font-weight: bold
+  padding: 0 1rem 0 2rem
+
+.oculto
+  display: none
+
+.visto
+  display: flex
+
+.det-foo-ctn
+  width: 100%
+  background-color: $cl-white
+  @include df(row,space-between)
+  padding: 1rem .5rem
+  margin-top: 4rem
+
+.det-foo-message
+  margin: 0
+  font-size: .8rem
+  font-family: $ft-prin
+  font-weight: bold
+  letter-spacing: 1px
+
+.det-foo-btn
+  width: 7rem
+  height: 2.5rem
+  background-color: $cl-prin
+  border: none
+  border-radius: 2px
+  font-family: $ft-prin
+  font-weight: bold
+  font-size: .8rem
+  padding: 0 1rem
+
+.det-foo-btn:focus
+  outline: none
+
+.cot-box-ctn
+  width: 90%
+  background-color: $cl-white
+  margin: .5rem auto
+  display: flex
+  justify-content: center
+  flex-direction: column
+

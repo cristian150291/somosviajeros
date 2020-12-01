@@ -1,0 +1,43 @@
+<app-nav-bar-form></app-nav-bar-form>
+<div class="ctn-tam">
+    <form action="" class="form-ctn" name="nuevaempresaForm" #nuevaempresaForm="ngForm" >
+        <div class="info-title-ctn">
+            <h3 class="info-title">{{"Nueva-emp-cuit-title" | translate}}</h3>
+        </div>
+        <div class="info-text-ctn2">
+            <p class="info-text2">{{"Nueva-emp-cuit-text" | translate}} </p>
+        </div>       
+        <div class="input-ctn">
+            <input type="text" name="cuit" class="input" id="cuit" #cuit="ngModel" [(ngModel)]="nuevaempresaModel.cuit" 
+            placeholder="{{'Nueva-emp-cuit-input' | translate}}" autocomplete="off" required>
+        </div>
+        <div class="btn-ctn" *ngIf="update!='update'">
+            <button #btnSiguiente (click)="onSubmit(nuevaempresaForm)" class="inicio" [disabled]="!nuevaempresaForm.form.valid" >{{"Nueva-emp-btn" | translate}}</button>
+        </div> 
+        <div class="btn-ctn" *ngIf="update=='update'">
+            <button #btnSiguiente (click)="nuevaEmpresa(nuevaempresaForm)" class="inicio" [disabled]="!nuevaempresaForm.form.valid" >{{"Finalizar-btn" | translate }}</button>
+        </div> 
+        
+    </form> 
+</div>
+
+<!-- MODAL PARA ALERTAR DEL SISTEMA -->
+<ng-template #alerMarker let-modal >
+    <div class="modal-ctn-padre">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeAlert()"></button>
+        </div>
+        <div class="m-top"></div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{ msgError }}</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-acep" (click)="closeAlert()">{{"Modal.acep" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,28 @@
+$cl-prin: #00A974   //Color primario #00A974 color de nuevo logo color viejo #fb7b63
+$cl-sec: #EFEFEF     //Color secundario
+$cl-ter: #E6E6E6     //Color terciario
+$cl-cua: #EFEDEA     //Color cuaternario
+$cl-quin: #c4c4c4
+$cl-sext: #5C5C5C
+$cl-gray: gray
+$cl-white: #ffffff
+$ft-prin: 'Open Sans', sans-serif   //Fuente principal
+$ft-sec: 'Open Sans', sans-serif   //Fuente secundaria(en este momento no contamos con una)
+$mw-480: 480px
+$mw-580: 580px
+$mw-768: 768px
+$mw-992: 992px
+$mw-1024: 1024px
+$mw-1280: 1280px
+$mw-1366: 1366px
+$mw-1680: 1680px
+
+@mixin mq($mw)
+  @media screen and (min-width: $mw)
+    @content
+
+@mixin df($fd:column,$jc:center,$ai:center)
+  display: flex
+  flex-direction: $fd
+  justify-content: $jc
+  align-items: $ai

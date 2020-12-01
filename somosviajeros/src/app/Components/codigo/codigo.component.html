@@ -1,0 +1,38 @@
+<app-nav-bar-form></app-nav-bar-form>
+<div class="barra-progreso-med"></div>
+<div class="ctn-tam">
+    <form action="" class="info-ctn" name="codigoForm" #codigoForm="ngForm"  (ngSubmit)="onSubmit(codigoForm)">
+        <div class="info-title-ctn">
+            <h3 class="info-title">{{ "Cod-title" | translate }}</h3>
+        </div>
+        <div class="inputs-ctn">
+            <div class="input-ctn">
+                <input type="text" name="cod1" class="input" id="cod1" #cod1="ngModel" maxlength="4" [(ngModel)]="codigoModel.cod1"
+                placeholder="{{'Cod-placeholder' | translate}}" autocomplete="off" required>
+            </div>
+            <div class="btn-ctn">
+                <button #btnSiguiente type="submit" class="inicio" [disabled]="!codigoForm.form.valid" >{{ "Btn-sig" | translate }}</button>
+            </div>
+        </div>
+    </form> 
+</div>
+<!-- TODAVIA SE DENE SOLUCIONAR COMO LEVVANTAR EL MODAL DESDE UN ELSE, PARA PODER RECIBIR EL #alertMarker -->
+<ng-template #alerMarker let-modal >
+    <div class="modal-ctn-padre">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeAlert()"></button>
+        </div>
+        <div class="m-top"></div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{ msgError }}</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-acep" (click)="closeAlert()">{{"Modal.acep" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>

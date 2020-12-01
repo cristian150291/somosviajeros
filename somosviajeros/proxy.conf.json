@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "http://busapp.seatcontrol.com.ar",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel" : "debug"
+    }
+  }

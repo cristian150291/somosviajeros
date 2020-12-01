@@ -1,0 +1,53 @@
+@import "src/variables"
+
+.pre-btns-ctn
+  width: 100%
+  display: flex
+  justify-content: space-between
+  @include mq($mw-480)
+    padding: 0 1rem
+  @include mq($mw-768)
+    justify-content: space-around
+
+
+.pre-btn-ctn
+  width: 6rem
+  height: 2.2rem
+  background-color: $cl-ter
+  border-radius: 20px
+  @include df(row)
+  color: $cl-gray
+  @include mq($mw-580)
+    width: 7.5rem
+    font-size: 1rem
+    letter-spacing: 1px
+  @include mq($mw-768)
+    width: 8rem
+    font-size: 1.1rem
+
+
+
+.pre-btn-ctn:first-child
+  margin-left: .5rem
+.pre-btn-ctn:last-child
+  margin-right: .5rem
+
+.pre-btn
+  font-size: .8rem
+  font-weight: bold
+  font-family: $ft-prin
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  @include mq($mw-1024)
+    cursor: pointer
+
+.pre-btn:focus
+  outline: none
+
+.active
+  background-color: $cl-prin
+  text-decoration: none
+  color: $cl-white

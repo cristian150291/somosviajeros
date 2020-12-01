@@ -1,0 +1,150 @@
+@import "../../../../variables"
+
+html
+    font-size: 16px
+
+@mixin mq($mw)
+    @media screen and (min-width: $mw)
+        @content
+
+.icon-location2
+    font-size: 1.4rem
+    font-weight: 600
+    color: $cl-prin
+    cursor: pointer
+
+.pt1-ctn, .pt1-ctn2
+    width: 100%
+    margin-top: 4rem
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.pt1-ctn2
+    margin-top: 1rem
+
+.mapas
+    width: 100%
+    height: 20rem
+    margin: 1rem 0
+    position: relative
+    @include mq($mw-992)
+        box-shadow: 11px 10px 14px -7px rgba(0,0,0,0.25), -5px 10px 14px -7px rgba(0,0,0,0.25)
+        width: 90%
+        height: 22rem
+        margin: 1rem auto
+    @include mq($mw-1280)
+        height: 30rem
+
+.map-text-ctn
+    position: absolute
+    top: 0
+    width: 100%
+    height: 1.5rem
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(0, 169, 116, .8)
+
+
+
+.map-text, .maps-points
+    font-size: .6rem
+    font-weight: bold
+    letter-spacing: 1px
+    font-family: $ft-prin
+    z-index: 150
+    color: $cl-white
+    padding-right: 1px
+
+.icon-point-down
+    color: $cl-white
+    font-size: 1.5rem
+
+.icon-dos
+    margin-right: .5rem
+    font-size: 1rem
+    color: white
+
+.map-points-ctn
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 1.5rem
+    background-color: rgba(0, 169, 116, .8)
+    display: flex
+    justify-content: center
+    align-items: center
+
+.maps-points
+    font-size: .8rem
+    color: white
+    font-family: $ft-prin
+
+.city-ctn
+    width: 100%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.city-item
+    width: 90%
+    height: 2em
+    margin: 0 auto
+    background-color: $cl-ter
+    display: flex
+    border-radius: 1em
+    margin-bottom: 1em
+    align-items: center
+    justify-content: space-around
+    @include mq($mw-480)
+        height: 3rem
+    @include mq($mw-580)
+        width: 80%
+    @include mq($mw-768)
+        width: 70%
+    @include mq($mw-992)
+        width: 60%
+    @include mq($mw-1024)
+        width: 50%
+    @include mq($mw-1280)
+        width: 40%
+    @include mq($mw-1366)
+        width: 35%
+
+
+.city-name
+    width: 80%
+    margin: 0
+    font-size: 1em
+    font-family: $ft-prin
+    font-weight: 500
+    text-align: left
+    padding-left: .5em
+
+.city-icon-ctn
+    width: 25%
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include mq($mw-480)
+        width: 18%
+    @include mq($mw-580)
+        width: 15%
+
+
+
+
+.icon-cancel-circle
+    padding-right: .5rem
+    cursor: pointer
+    @include mq($mw-480)
+        padding-right: 1rem
+    @include mq($mw-1280)
+        padding-right: .5rem
+
+.sep-bottom
+    height: 1rem
+

@@ -1,0 +1,95 @@
+<app-nav-bar-emp></app-nav-bar-emp>
+<div class="ctn-tam">
+    <div class="info-title-ctn">
+        <h2 class="info-title" >Responder cotización de Jazmín</h2>
+    </div>
+
+    <div class="acordion-ctn uno">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title *ngIf="mostrar">
+                        <div class="cot-check"><div class="check-green"></div></div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <h3 class="cot-box-title">¿Qué vehículo hará el trabajo?</h3>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <select name="algo" id="algo" class="select-cot">
+                    <option hidden selected>Selecciona un vehículo</option>
+                    <option value="1" class="algooo">autito</option>
+                    <option value="1" class="algooo">autito 2</option>
+                    <option value="1" class="algooo">autito 3</option>
+                    <option value="1" class="algooo">autito 4</option>
+                </select>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <div class="acordion-ctn dos">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title *ngIf="mostrar">
+                        <div class="cot-check"><div class="check-green"></div></div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <h3 class="cot-box-title">¿Qué incluye esta cotización?</h3>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="cot-opt-ctn">
+                    <mat-slide-toggle [color]="color"><p class="cot-slide-text">Incluye alojamiento de choferes</p></mat-slide-toggle>
+                    <mat-slide-toggle [color]="color"><p class="cot-slide-text">Incluye alimentación de choferes</p></mat-slide-toggle>
+                    <mat-slide-toggle [color]="color"><p class="cot-slide-text">Incluye peajes</p></mat-slide-toggle>
+
+                </div>
+                <div class="det-sep"></div>
+                <div class="cot-check-ctn">
+                    <input type="checkbox" class="cot-check-box"> <span class="cot-slide-text">No incluye nada</span>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <div class="acordion-ctn tres">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title *ngIf="mostrar">
+                        <div class="cot-check"><div class="check-green"></div></div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <h3 class="cot-box-title">¿Qué vehículo hará el trabajo?</h3>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <input type="text" placeholder="Ingresa el monto">
+                <mat-slide-toggle [color]="color">Solicitar un anticipo</mat-slide-toggle>
+                <span>Monto del anticipo</span><span>40%/$12.000</span>
+                <br>
+                <mat-slider [color]="color" ></mat-slider>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <footer class="cot-foo-ctn">
+        <div class="cot-foo-btns-ctn">
+            <button class="cot-foo-btn">Guardar</button>
+            <button class="cot-foo-btn">Enviar</button>
+        </div>
+    </footer>
+ 
+</div>
+
+
+
+  
+
+<!--<div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>-->

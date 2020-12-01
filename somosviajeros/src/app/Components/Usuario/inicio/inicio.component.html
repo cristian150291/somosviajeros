@@ -1,0 +1,74 @@
+<!-- MENU LOGIN -->
+<app-nav-bar-user
+[nameUser]="userName"
+></app-nav-bar-user>
+<!-- CABECERA -->
+<div class="ctn-header">
+    <div class="img-header"></div>
+    <div *ngIf="!tieneEmpresa" class="btn-header">
+      <button class="btn-header-via" (click)="sumaEmpresa()" >{{ "Btn-emp" | translate }}</button>
+    </div>
+    <div *ngIf="tieneEmpresa" class="btn-header">
+      <button class="btn-header-via" (click)="miEmpresa()" >{{ "Btn-mi-emp" | translate }}</button>
+    </div>
+    <div class="sombra">
+        <div class="title-input-ctn">
+            <h1 class="title-gral">{{ "Header-title.parte1" | translate }} <br> {{ "Header-title.parte2" | translate }} </h1>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- COMPONENTES DE INFORMACION -->
+<div class="info-ctn">
+  <div class="info-title-ctn">
+      <h3 class="info-title">{{ "Encontra-title.parte1" | translate }} <br>
+        {{ "Encontra-title.parte2" | translate }}</h3>
+  </div>
+  <div class="info-text-ctn">
+      <p class="info-text">{{"Text-encontra.parte1" | translate }}<br>
+        {{"Text-encontra.parte2" | translate }}</p>
+  </div>
+
+  <div class="cirlulos-ctn">
+      <div class="circulos"></div>
+      <div class="circulos"></div>
+      <div class="circulos"></div>
+      <div class="circulos"></div>
+      <div class="circulos"></div>
+  </div>
+  
+</div>
+
+<div class="info-ctn bacco-white">
+  <div class="info-title-ctn">
+      <h3 class="info-title">{{"Decision-title" | translate}}</h3>
+  </div>
+  <div class="info-text-ctn">
+      <p class="info-text">{{"Text-decision.parte1" | translate }} <br>
+        {{"Text-decision.parte2" | translate }}<br>
+        {{"Text-decision.parte3" | translate }}<br>
+        {{"Text-decision.parte4" | translate }}</p>
+  </div>    
+  <div class="cajas"></div>
+</div>
+<div class="info-ctn bacco-cl-ter">
+  <div class="info-title-ctn">
+      <h3 class="info-title">{{"Puntos-title.parte1" | translate }} <br>
+        {{"Puntos-title.parte2" | translate }}</h3>
+  </div>
+  <div class="info-text-ctn">
+      <p class="info-text">{{"Text-puntos.parte1" | translate }}<br>
+        {{"Text-puntos.parte2" | translate }}</p>
+  </div>
+  <div class="cajas"></div>
+</div>
+<!-- FOOTER -->
+<div class="reg-ctn">
+  <p class="text-reg">{{"Text-reg.parte1" | translate }}<br>
+    {{"Text-reg.parte2" | translate }}</p>    
+  <button class="btn-reg" >{{"Btn-reg" | translate}}</button>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,199 @@
+{
+    "Btn-sig": "Next",
+    "Btn-env": "Send",
+    "Btn-emp" : "Add your company",
+    "Btn-mi-emp": "My Company",
+    "Btn-via" : "Travel",
+    "Header-title" : {
+        "parte1":"Hire a van, combi or",
+        "parte2": "bus for your group trips"
+    },
+    "Home-input": "From what city does your group?",
+    "Encontra-title" : {
+        "parte1": "Find all transport",
+        "parte2": "companies in one place"
+    },
+    "Text-encontra": {
+        "parte1": "Save time and money by quoting",
+        "parte2": "with multiple service providers."
+    },
+    "Decision-title" : "Make a smart decision",
+    "Text-decision" : {
+        "parte1": "Review the ratings of other users,",
+        "parte2": "hiring and cancellation policy,",
+        "parte3": "including the vehicle in which you are going",
+        "parte4": "to travel and their ratings."
+    },
+    "Puntos-title": {
+        "parte1": "I accessed our benefits",
+        "parte2": "program"
+    },
+    "Text-puntos": {
+        "parte1": "Using Roddapp you accumulate points redeemable",
+        "parte2": "for discounts and more trips!"
+    },
+    "Text-reg": {
+        "parte1": "Search for your next trip",
+        "parte2": "vin Roddapp for free"
+    },
+    "Btn-reg": "Find a trip",
+    "Foo-recursos": {
+        "Title": "Resources",
+        "link1": "Support",
+        "link2": "About us",
+        "link3": "Contact",
+        "link4": "Blog",
+        "link5": "Employment",
+        "link6": "Privacity"
+    },
+    "Foo-explorar": {
+        "Title": "Explore",
+        "link1": "Prices",
+        "link2": "Sports clubs",
+        "link3": "Educational Institutions",
+        "link4": "Features"
+    },
+    "Foo-comparar": {
+        "Title": "Compare",        
+        "link1": "Traditional companies"
+    },
+    "Foo-copy": "All rights reserved",
+    "Login-title": "Sign in",
+    "Login-mail": "e-mail",
+    "Login-pass": "Password",
+    "Login-btns": {
+        "btn1": "Enter",
+        "btn2": "Forgot your password?",
+        "btn3": "Register for free",
+        "btn4": "Login with Google",
+        "btn5": "Login with Facebook"
+    },
+    "Login-emp": {
+        "parte1": "Activate your fleet and generate",
+        "parte2": "profitability"
+    },
+    "Login-emp-encontra":{
+        "Title": "Access all market demand",
+        "parte1": "People use roddapp to find,",
+        "parte2": "multiple quotes for their group trips,",
+        "parte3": "find more possibilities to generate trips and",
+        "parte4": "new customers."
+    },
+    "Login-emp-decision":{
+        "Title": "Keep your fleet always active",
+        "parte1": "We are a channel for generating new journeys,",
+        "parte2": "we help you generate more demand",
+        "parte3": "constant travel and thus offset your costs",
+        "parte4": "fixed."
+    },
+    "Login-emp-puntos":{
+        "Title1": "Eliminate your advertising expenses,",
+        "Title2": "Roddapp brings you clients.",
+        "parte1": "It is rarely possible to calculate the impact",
+        "parte2": "that advertising generates on your business.",
+        "parte3": "Roddapp instead brings you customers",
+        "parte4": "and new trips and registration is free!."
+    },
+    "Login-emp-text":{
+        "parte1": "Register and respond",
+        "parte2": "to free quotes.",
+        "parte3": "We will only charge you 2% for",
+        "parte4": "each trip generated in",
+        "parte5": "Roddapp.",
+        "Btn": "Register for Free"
+    },
+    "Punto-trab-1-input": "Tell us the city of operation",
+    "Punto-trab-1-title": "Identify your points of operation.",
+    "Punto-trab-1-title2": "Your markers",
+    "Punto-trab-1-text-sup": "Click to add a point of operation",
+    "Punto-trab-1-text-inf": "Identified points",
+    "Nueva-emp-name-title": "What's your company name?",
+    "Nueva-emp-name-input": "I wrote your company name",
+    "Nueva-emp-btn": "Next",
+    "Finalizar-btn": "Finish",
+    "Nueva-emp-cuit-title": "What is your company's CUIT?",
+    "Nueva-emp-cuit-input": "I wrote your company's CUIT",
+    "Nueva-emp-cuit-text": "We will validate your data with MiArgentina to make sure you are responsible for the company.",
+    "Cod-title": "Enter code",
+    "Cod-placeholder": "Enter your code",
+    "Pass-title": "Passwords",
+    "Pass-placeholder1": "Enter your password",
+    "Pass-placeholder2": "Confirm your password",
+    "Dat-usr-title": "Personal information",
+    "Dat-place-name": "Enter your name",
+    "Dat-place-last": "Enter your last name",
+    "New-usr-title": "Register",
+    "New-usr-placeholder" : "Enter your email",
+    "Olv-pass-title": "Forgot your password?",
+    "Olv-pass-placeholder" : "Enter your email",
+    "Cam-pass-title": "Passwords",
+    "Cam-pass-placeholder1": "Enter your password",
+    "Cam-pass-placeholder2": "Confirm your password",
+    "PT2-btn": "Add operating point",
+    "Modal": {
+        "si": "Yes",
+        "no": "No",
+        "acep": "Accept",
+        "PT2-title": "You wish to remove the point",
+        "PT1-title1": "Operation point",
+        "PT1-placeholder": "Enter the point name",
+        "PT1-title2": "You wish to remove the point",
+        "PT1-title3": "Enter a point of operation",
+        "MsgCorreoVerif1" : "We send a code to your mail!",
+        "MsgCorreoVerif2" : "(Please check also in spam)",
+        "MsgFinPT1": "Are you sure you want to finish?",
+        "PopUpTitleSup": "Steps:",
+        "PopUpTitleCenterSup": "1 - Locate the city",
+        "PopUpTitleCenterInf": "2 - Click on the map to mark the point"
+    },
+    "Pre-btns":{
+        "entrantes": "Starters",
+        "borradores": "Drafts",
+        "sinrespuesta": "No response"
+    },
+    "NavBar": {
+        "config": "Configuration",
+        "dat-bas": "Basic data",
+        "punt": "Working points",
+        "somos": "Who are we?",
+        "flota": "Fleet",
+        "cer-ses": "Log out"
+    },
+    "ConfirmarDatos": {
+        "title": "Request for quotation",
+        "inicio": "Start of the trip",
+        "salida": "Exit",
+        "parada": "Stop",
+        "fin": "End of the trip",
+        "llegada": "Arrival",
+        "comentarios": "Comments:",
+        "tiempo": "Travel time",
+        "pasajeros": "Passengers",
+        "vehiculo": "Preferred vehicle",
+        "btn-edit": "Edit trip",
+        "btn-confirm": "Request a quote"
+    },
+    "DatosExtra": {
+        "title": "Enter additional information",
+        "comentarios": "Tell us more about your trip:",
+        "equipaje": "What luggage do you carry?",
+        "btn-continuar": "Continue",
+        "mano": "Hand",
+        "pequenio": "Small",
+        "mediano": "Medium",
+        "grande": "Large",
+        "cantidad": "Quantity"
+    },
+    "HeaderPanelViajes": {
+        "idayvuelta": "Round trip",
+        "soloida": "One way",
+        "multi": "Multi-stop"
+    },
+    "PanelViajes": {
+        "pasajeros": "Passengers",
+        "fecha": "Date and time of departure",
+        "btn-continuar": "Continue",
+        "dd-mm-aaaa": "dd-mm-yyyy"
+    }
+    
+}

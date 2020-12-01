@@ -1,0 +1,124 @@
+@import "src/variables"
+
+.pre-ctn
+  width: 100%
+  @include mq($mw-1024)
+    display: flex
+    flex-wrap: wrap
+
+.cpm-pre-ctn
+  width: 100%
+  @include df(row,center,stretch)
+  margin-bottom: 1.5rem
+  @include mq($mw-1024)
+    width: 50%
+
+.presupuestos-ctn
+  width: 90%
+  height: 100%
+  background-color: $cl-white
+  z-index: 100
+  overflow: hidden
+  &::before   //Colocamos un before para poder hacer click en cualquier parte del contenido
+        content: ''
+        width: 90%
+        height: 100%
+        position: absolute
+        background-color: transparent
+        z-index: 150
+  @include mq($mw-1024)
+    width: 25rem
+    &::before
+      width: 25rem
+      height: 88%
+
+.cmp-ida-ctn
+  width: 100%
+
+.cmp-title-ctn
+  width: 40%
+  height: 1.8rem
+  background-color: $cl-ter
+  @include df(row,space-around)
+  margin-bottom: 1rem
+
+.cmp-title
+  font-size: .7rem
+  font-family: $ft-prin
+  font-weight: 600
+  color: $cl-gray
+
+.icon-arrow-right2, .icon-arrow-left2
+  color: $cl-gray
+  font-size: .8rem
+
+.cpm-info-ctn
+  width: 95%
+  height: 6rem
+  margin: 0 auto
+  display: grid
+  grid-template-columns: 1.1fr .8fr 1.1fr
+  line-height: 1.2rem
+
+.cpm-ini-ctn
+  grid-column: 1/2
+  padding-left: .5rem
+
+.cpm-paradas-ctn
+  grid-column: 2/3
+  width: 100%
+  @include df()
+
+.cpm-fin-ctn
+  grid-column: 3/4
+  padding-left: .5rem
+.cpm-fecha
+  font-size: .7rem
+  letter-spacing: 2px
+  color: $cl-gray
+.cpm-ciudad
+  font-size: .9rem
+  font-weight: bold
+
+.cpm-provincia
+  font-size: .9rem
+  color: $cl-gray
+.cpm-horario
+  font-size: .9rem
+  color: $cl-gray
+.paradas-title
+  font-size: .6rem
+  font-weight: bold
+
+.cpm-ctn-footer
+  width: 100%
+  display: flex
+  flex-direction: column
+  padding: 1rem 0
+  border-top: 1px solid $cl-ter
+
+.cpm-foo-cantidad, .cpm-foo-solicitado,.cpm-foo-tiempo
+  display: flex
+  align-items: center
+
+.cpm-foo-solicitado,.cpm-foo-tiempo
+  padding-top: 1rem
+.icon-users, .algo, .icon-clock
+  padding: 0 1rem
+  font-size: 1.3rem
+
+
+.foo-title, .foo-variable
+  font-family: $ft-prin
+  font-size: .9rem
+  color: $cl-gray
+
+.foo-variable
+  font-weight: bold
+  padding-left: .5rem
+
+
+.flecha-ctn
+  width: 4rem
+  height: .5rem
+

@@ -1,0 +1,64 @@
+<div class="navbar-ctn">
+  <div class="navbar-icons-ctn">
+    <a class="a-title" [routerLink]="['/home']"><div class="logo-rodd"></div></a>
+
+    <div class="navbar-subicons-ctn" *ngIf="nameUser==''">
+      <div class="login-navbar" (click)="showModalLogin()" *ngIf="!isaEmpresa">Iniciar sesión</div>
+      <app-banderas></app-banderas>
+    </div>
+    <div class="navbar-subicons-ctn" *ngIf="nameUser!=''">
+      <span class="name-navbar">{{ nameUser }}</span>
+      <app-banderas></app-banderas>
+      <div class="icon-user-noimg2" *ngIf="imgUser==''" (click)="toggle()"><span class="icon-user"></span></div>
+      <img class="img-user2" src="{{imgUser}}" alt="" *ngIf="imgUser!=''" (click)="toggle()">
+      <!--<div class="icon-user menu-icon" (click)="toggle()"></div>-->
+      <nav class="menu-item-ctn" >
+        <ul class="items-menu-ctn2" [@entrada]="isOpen">
+          <li class="items-menu">
+            <a class="a-menu" [routerLink]="['/home/logout']">{{"NavBar.cer-ses" | translate}}</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="menu-item-ctn-dtp" >
+        <ul class="items-menu-ctn-dtp">
+          <li class="items-menu-dtp">
+            <div class="icon-user-noimg" *ngIf="imgUser==''"><span class="icon-user"></span></div>
+            <img class="img-user" src="{{imgUser}}" alt="" *ngIf="imgUser!=''">
+            <ul class="sub-menu-dtp">
+              <!--<li class="menu-item-dtp">
+                <a class="menu-link-dtp" [routerLink]="['/home-empresa/nuevaempresa/update']">Datos base</a>
+              </li>-->
+              <li class="menu-item-dtp">
+                <a href="#" class="menu-link-dtp" [routerLink]="['/home-empresa/quienessomos']">¿Quienes somos?</a>
+              </li>
+              <li class="menu-item-dtp">
+                <a class="menu-link-dtp" [routerLink]="['/home/logout']">{{"NavBar.cer-ses" | translate}}</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<ng-template #login let-modal >
+  <div class="modal-ctn-padre">
+    <div class="modal-ctn">
+      <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+      <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeModalLogin()"></button>
+    </div>
+    <div class="modal-contenido-central">
+      <app-login #refLogin
+              [loginEntry]="notifyLogin"
+              (onSubmitLocal)="onSubmit($event)"
+              (newUser)="onRegister()"
+              (forgetUser)="olvPass()"
+              (onSubmitSocial)="onSubmitLoginSocial($event)"
+      >
+      </app-login>
+    </div>
+
+  </div>
+</ng-template>

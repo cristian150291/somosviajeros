@@ -1,0 +1,198 @@
+{   
+    "Btn-sig": "Siguiente",
+    "Btn-env": "Enviar",
+    "Btn-emp" : "Sumá tu empresa",
+    "Btn-mi-emp": "Mi Empresa",
+    "Btn-via" : "Viajar",
+    "Header-title" : {
+        "parte1":"Contratá una van, combi o",
+        "parte2": "bus para tus viajes grupales"
+    },
+    "Home-input": "¿Desde qué ciudad sale tu grupo?",
+    "Encontra-title" : {
+        "parte1": "Encontrá todas las empresas",
+        "parte2": "de transporte en un sólo lugar"
+    },
+    "Text-encontra": {
+        "parte1": "Ahorrá tiempo y dinero cotizando con",
+        "parte2": "múltiples proveedores de servicios."
+    },
+    "Decision-title" : "Tomá una decisión inteligente",
+    "Text-decision" : {
+        "parte1": "Revisá las calificaciones de otros usuarios,",
+        "parte2": "política de contratación y cancelaciones,",
+        "parte3": "incluso el vehículo en el que vas a viajar",
+        "parte4": "y sus habilitaciones."
+    },
+    "Puntos-title": {
+        "parte1": "Accedé a nuestro programa de",
+        "parte2": "beneficios"
+    },
+    "Text-puntos": {
+        "parte1": "Usando Roddapp acumulas puntos canjeables",
+        "parte2": "por descuentos ¡y más viajes!"
+    },
+    "Text-reg": {
+        "parte1": "Buscá gratis tu próximo",
+        "parte2": "viaje en Roddapp"
+    },
+    "Btn-reg": "Buscar un viaje",
+    "Foo-recursos": {
+        "Title": "Recursos",
+        "link1": "Soporte",
+        "link2": "Sobre nosotros",
+        "link3": "Contacto",
+        "link4": "Blog",
+        "link5": "Empleos",
+        "link6": "Privacidad"
+    },
+    "Foo-explorar": {
+        "Title": "Explorar",
+        "link1": "Precios",
+        "link2": "Clubes deportivos",
+        "link3": "Instituciones educativas",
+        "link4": "Características"
+    },
+    "Foo-comparar": {
+        "Title": "Comparar",        
+        "link1": "Empresas tradicionales"
+    },
+    "Foo-copy": "Todos los derechos reservados",
+    "Login-title": "Iniciar sesión",
+    "Login-mail": "Mail",
+    "Login-pass": "Contraseña",
+    "Login-btns": {
+        "btn1": "Ingresar",
+        "btn2": "¿Olvidaste tu contraseña?",
+        "btn3": "Registrate gratis",
+        "btn4": "Ingresa con Google",
+        "btn5": "Ingresa con Facebook"
+    },
+    "Login-emp": {
+        "parte1": "Activá tu flota y generá",
+        "parte2": "rentabilidad"
+    },
+    "Login-emp-encontra":{
+        "Title": "Accedé a toda la demanda del mercado",
+        "parte1": "Las personas usan roddapp para encontrar",
+        "parte2": "múltiples cotizaciones para sus viajes grupales,",
+        "parte3": "encontra más posibilidades de generar viajes y",
+        "parte4": "nuevos clientes."
+    },
+    "Login-emp-decision":{
+        "Title": "Mantené tu flota siempre activa",
+        "parte1": "Somos un canal de generación de nuevos viajes,",
+        "parte2": "te ayudamos a generar una demanda más",
+        "parte3": "constante de viajes y así compensar tus costos",
+        "parte4": "fijos."
+    },
+    "Login-emp-puntos":{
+        "Title1": "Eliminá tus gastos de publicidad,",
+        "Title2": "Roddapp te trae clientes.",
+        "parte1": "Rara vez es posible calcular el impacto que la",
+        "parte2": "publicidad genera en tu negocio.",
+        "parte3": "Roddapp en cambio se encarga de traerte clientes",
+        "parte4": "y nuevos viajes ¡Y registrarse es grátis!."
+    },
+    "Login-emp-text":{
+        "parte1": "Registrate y responda",
+        "parte2": "cotizaciones gratis.",
+        "parte3": "Sólo te cobraremos 2% por",
+        "parte4": "cada viaje generado en",
+        "parte5": "Roddapp.",
+        "Btn": "Registrate Gratis"
+    },
+    "Punto-trab-1-input": "Indícanos la ciudad de operación",
+    "Punto-trab-1-title": "Identifica tus puntos de operación.",
+    "Punto-trab-1-title2": "Tus marcadores",
+    "Punto-trab-1-text-sup": "Haga click para agregar un punto de operación",
+    "Punto-trab-1-text-inf": "Puntos identificados",
+    "Nueva-emp-name-title": "¿Cómo se llama tu empresa?",
+    "Nueva-emp-name-input": "Escribí el nombre de tu empresa",
+    "Nueva-emp-btn": "Siguiente",
+    "Finalizar-btn": "Finalizar",
+    "Nueva-emp-cuit-title": "¿Cuál es el CUIT de tu empresa?",
+    "Nueva-emp-cuit-input": "Escribí el CUIT de tu empresa",
+    "Nueva-emp-cuit-text": "Validaremos tus datos con MiArgentina para asegurarnos de que sos el resposable de la empresa.",
+    "Cod-title": "Ingrese código",
+    "Cod-placeholder": "Digite su código",
+    "Pass-title": "Contraseñas",
+    "Pass-placeholder1": "Ingrese su contraseña",
+    "Pass-placeholder2": "Confirme su contraseña",
+    "Dat-usr-title": "Datos personales",
+    "Dat-place-name": "Ingrese su nombre",
+    "Dat-place-last": "Ingrese su apellido",
+    "New-usr-title": "Registrate",
+    "New-usr-placeholder" : "Ingrese su mail",
+    "Olv-pass-title": "¿Olvidaste tu contraseña?",
+    "Olv-pass-placeholder" : "Ingrese su mail",
+    "Cam-pass-title": "Contraseñas",
+    "Cam-pass-placeholder1": "Ingrese su contraseña",
+    "Cam-pass-placeholder2": "Confirme su contraseña",
+    "PT2-btn": "Agregar punto de operación",
+    "Modal": {
+        "si": "Si",
+        "no": "No",
+        "acep": "Aceptar",
+        "PT2-title": "¿Desea eliminar el punto",
+        "PT1-title1": "Punto de operación",
+        "PT1-placeholder": "Ingrese el nombre del punto",
+        "PT1-title2": "¿Desea eliminar el punto",
+        "PT1-title3": "Ingrese un punto de operación.",
+        "MsgCorreoVerif1" : "¡Enviamos un código a tu mail!",
+        "MsgCorreoVerif2" : "(Por favor verifica también en spam)",
+        "MsgFinPT1": "¿Está seguro que desea finalizar?",
+        "PopUpTitleSup": "Pasos:",
+        "PopUpTitleCenterSup": "1 - Ubica la ciudad",
+        "PopUpTitleCenterInf": "2 - Click en el mapa para marcar el punto"
+    },
+    "Pre-btns":{
+        "entrantes": "Entrantes",
+        "borradores": "Borradores",
+        "sinrespuesta": "Sin responder"
+    },
+    "NavBar": {
+        "config": "Configuración",
+        "dat-bas": "Datos base",
+        "punt": "Puntos de trabajo",
+        "somos": "¿Quienes somos?",
+        "flota": "Flota",
+        "cer-ses": "Cerrar sesión"
+    },
+    "ConfirmarDatos": {
+        "title": "Solicitud de presupuesto",
+        "inicio": "Inicio del viaje",
+        "salida": "Salida",
+        "parada": "Parada",
+        "fin": "Fin del viaje",
+        "llegada": "Llegada",
+        "comentarios": "Comentarios:",
+        "tiempo": "Tiempo de viaje",
+        "pasajeros": "Pasajeros",
+        "vehiculo": "Vehículo preferido",
+        "btn-edit": "Editar viaje",
+        "btn-confirm": "Solicitar presupuesto"
+    },
+    "DatosExtra": {
+        "title": "Ingresa infomación adicional",
+        "comentarios": "Contanos más sobre tu viaje:",
+        "equipaje": "¿Cuánto equipaje querés llevar?",
+        "btn-continuar": "Continuar",
+        "mano": "Mano",
+        "pequenio": "Pequeño",
+        "mediano": "Mediano",
+        "grande": "Grande",
+        "cantidad": "Cantidad"
+    },
+    "HeaderPanelViajes": {
+        "idayvuelta": "Ida y vuelta",
+        "soloida": "Solo ida",
+        "multi": "Multidestino"
+    },
+    "PanelViajes": {
+        "pasajeros": "Pasajeros",
+        "fecha": "Fecha y hora de salida",
+        "btn-continuar": "Continuar",
+        "dd-mm-aaaa": "dd-mm-aaaa"
+    }
+}

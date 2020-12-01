@@ -1,0 +1,19 @@
+<app-nav-bar-emp></app-nav-bar-emp>
+<div class="ctn-tam">
+    <div class="info-title-ctn">
+        <h2 class="info-title" >Presupuests</h2>
+    </div>
+    
+    <ul class="pre-btns-ctn">
+        <li class="pre-btn-ctn" [routerLinkActive]="['active']">
+            <span [routerLink]="['/home-empresa/dashboard/entrantes']"  class="pre-btn">{{"Pre-btns.entrantes" | translate}}</span>
+        </li>
+        <li class="pre-btn-ctn" [routerLinkActive]="['active']">
+            <span [routerLink]="['/home-empresa/dashboard/borradores']"  class="pre-btn">{{"Pre-btns.borradores" | translate}}</span>
+        </li>
+        <li class="pre-btn-ctn" [routerLinkActive]="['active']">
+            <span  [routerLink]="['/home-empresa/dashboard/sinresponder']"  class="pre-btn">{{"Pre-btns.sinrespuesta" | translate}}</span>
+        </li>
+    </ul>
+<router-outlet></router-outlet>
+</div>

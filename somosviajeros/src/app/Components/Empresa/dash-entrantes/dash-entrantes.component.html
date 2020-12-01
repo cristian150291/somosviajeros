@@ -1,0 +1,81 @@
+<ng-container *ngIf="hayEntrantes else content">
+    <div class="pre-ctn">
+        <div class="cpm-pre-ctn" *ngFor="let pre of presupuestosEntrantes">
+        <div class="presupuestos-ctn" (click)="verPresupuesto(pre.id)">
+            <div class="cmp-ida-ctn">
+                <div class="cmp-title-ctn">
+                    <h3 class="cmp-title">
+                        IDA
+                    </h3>
+                    <span class="icon-arrow-right2"></span>
+                </div>
+                <div class="cpm-info-ctn">
+                    <div class="cpm-ini-ctn">
+                        <p class="cpm-fecha">{{pre.ida.dia}} {{pre.ida.mes}}</p>
+                        <p class="cpm-ciudad">{{pre.ida.ciudadInicial}}</p>
+                        <p class="cpm-provincia">{{pre.ida.provinciIncial}}</p>
+                        <p class="cpm-horario">{{pre.ida.horaSalidaInicial}} hrs.</p>
+                    </div>
+                    <div class="cpm-paradas-ctn">
+                        <div class="flecha-ctn"><div class="iconodeflecha"></div></div>
+                        <p class="paradas-title">paradas {{pre.ida.paradas}}</p>
+                    </div>
+                    <div class="cpm-fin-ctn">
+                        <p class="cpm-fecha">{{pre.ida.diallegada}} {{pre.ida.mesllegada}}</p>
+                        <p class="cpm-ciudad">{{pre.ida.ciudadFinal}}</p>
+                        <p class="cpm-provincia">{{pre.ida.provinciaFianl}}</p>
+                        <p class="cpm-horario">{{pre.ida.horaLlegadaFinal}} hrs.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cpm-ctn-vuelta" *ngIf="pre.vuelta!=''">
+                <div class="cmp-title-ctn">
+                    <h3 class="cmp-title">
+                        VUELTA
+                    </h3>
+                    <span class="icon-arrow-left2"></span>
+                </div>
+                <div class="cpm-info-ctn">
+                    <div class="cpm-ini-ctn">
+                        <p class="cpm-fecha">{{pre.vuelta.dia}} {{pre.vuelta.mes}}</p>
+                        <p class="cpm-ciudad">{{pre.vuelta.ciudadInicial}}</p>
+                        <p class="cpm-provincia">{{pre.vuelta.provinciIncial}}</p>
+                        <p class="cpm-horario">{{pre.vuelta.horaSalidaInicial}} hrs.</p>
+                    </div>
+                    <div class="cpm-paradas-ctn">
+                        <div class="flecha-ctn"><div class="iconodeflecha"></div></div>
+                        <p class="paradas-title">paradas {{pre.vuelta.paradas}}</p>
+                    </div>
+                    <div class="cpm-fin-ctn">
+                        <p class="cpm-fecha">{{pre.vuelta.diallegada}} {{pre.vuelta.mesllegada}}</p>
+                        <p class="cpm-ciudad">{{pre.vuelta.ciudadFinal}}</p>
+                        <p class="cpm-provincia">{{pre.vuelta.provinciaFinal}}</p>
+                        <p class="cpm-horario">{{pre.vuelta.horaLlegadaFinal}} hrs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cpm-ctn-footer">
+                <div class="cpm-foo-cantidad">
+                    <span class="icon-users"></span>
+                    <span class="foo-title">Viajarán</span>
+                    <span class="foo-variable"> {{pre.cantidadAdultos}} Adultos y {{pre.cantidadNinios}} niños </span>
+                </div>
+                <div class="cpm-foo-solicitado">
+                    <span class="icon-user algo"></span>
+                    <span class="foo-title">Solicitado por</span>
+                    <span class="foo-variable"> {{pre.nombreUsuario}} </span>
+                </div>
+                <div class="cpm-foo-tiempo">
+                    <span class="icon-clock"></span>
+                    <span class="foo-title">Tienes {{pre.tiempoRespuesta}} horas para responder</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</ng-container>
+
+<ng-template #content>
+    <p>Sin datos ...!!!</p>
+</ng-template>

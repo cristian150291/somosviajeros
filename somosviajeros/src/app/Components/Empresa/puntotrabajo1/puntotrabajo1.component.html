@@ -1,0 +1,187 @@
+<app-nav-bar-form></app-nav-bar-form>
+<div class="pt1-ctn">
+    <div class="info-title-ctn">
+        <h1 class="info-title">{{'Punto-trab-1-title' | translate}}</h1>
+    </div>    
+    <div class="inputs-ctn">      
+        <div class="input-ctn">        
+            <input #inputGoogle class="input-point" autocomplete="off" placeholder="{{'Punto-trab-1-input' | translate}}" ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+        </div>
+    </div>
+
+    <div class="mapas">
+        <google-map #mapContainer
+            width = "100%"
+            height = "100%"
+            [zoom] = "zoom"
+            [center] = "center"
+            control="map.control"
+            (mapClick)="mapClicked($event,content)"                  
+        >
+        <div *ngIf="marker">
+            <map-marker   *ngFor ="let item of marker"
+                [position]="item.position"
+                [label]="item.label"
+                [title]="item.title"
+                [options]="item.options"
+                (mapClick)="openMarkerDelete($event, delContent)"
+            >
+            </map-marker>
+        </div>
+        </google-map>
+        <div class="map-text-ctn">
+            <span class="icon-location2 icon-dos"></span>
+            <h5 class="map-text">{{countMarker}} {{"Punto-trab-1-text-inf" | translate}}</h5>
+        </div>
+    </div>
+
+</div>
+
+<div class="pt1-ctn2" *ngIf="marker.length > 0">
+    <div class="info-title-ctn">
+        <h1 class="info-title">{{'Punto-trab-1-title2' | translate}}</h1>
+    </div>
+</div>
+<div class="sep-bottom"></div>
+<!-- Seccion tus marcadores -->
+<div class="city-ctn" *ngIf="marker.length > 0">
+    <div class="city-item" *ngFor ="let item of marker">
+        <p class="city-name" id="{{item.id}}" > {{item.title}}</p>
+        <div class="city-icon-ctn">
+            <span class="icon-location2" (click)="showPointer(item.id)"></span>
+            <span class="icon-cancel-circle" (click)="open(contentpt,item.id)"></span>
+        </div>
+    </div>
+</div>
+<div class="form-ctn" *ngIf="marker.length > 0">
+    <div class="btn-ctn">
+        <button #btnSiguiente type="submit" class="inicio" (click)="abrirModalFinalizar(finContent)">{{"Finalizar-btn" | translate }}</button>
+    </div>
+</div>
+<div class="sep-bottom"></div>
+<!--modales-->
+<ng-template #contentpt let-modal >
+    <div  class="modal-ctn-padre">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closePt()"></button>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{"Modal.PT2-title" | translate}} "{{nameDeleteInferior}}"?</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-yes" (click)="deleteIndice()">{{"Modal.si" | translate}}</button>
+                <button type="button" class="modal-btn modal-no" (click)="closePt()">{{"Modal.no" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<!-- MODAL PARA CARGAR PUNTO EN EL MAPA DE MANERA MANUAL, SOLICITA UN NOMBRE LA EL PUNTO DE TRABAJO-->
+<ng-template #content let-modal >
+    <form  class="modal-ctn-padre" name="modalForm" #modalForm="ngForm"  (ngSubmit)="guardarMarker(modalForm)">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="close(modalForm)"></button>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{"Modal.PT1-title1" | translate}}</h4>
+            <input type="text" name="nombre" class="modal-input" id="nombre" #nombre="ngModel" [(ngModel)]="namePT" placeholder="{{'Modal.PT1-placeholder' | translate}}" autocomplete="off" required>
+            <span *ngIf="nombreDuplicado!=''" class="modal-subtitle"> {{nombreDuplicado}}</span>
+        </div>
+
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="submit" class="modal-btn modal-yes"  [disabled]="!modalForm.form.valid">{{"Modal.si" | translate}}</button>
+                <button type="button" class="modal-btn modal-no" (click)="close(modalForm)">{{"Modal.no" | translate}}</button>
+            </div>
+        </div>
+    </form>
+</ng-template>
+<!-- ------------------------------------------------------------------------------------------------------>
+
+<ng-template #delContent let-modal >
+    <form  class="modal-ctn-padre" name="modalDel" #modalDel="ngForm"  (ngSubmit)="delMarker()">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeDel()"></button>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{"Modal.PT1-title2" | translate}} "{{nameMarDelte}}"?</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-yes" (click)="delMarker()">{{"Modal.si" | translate}}</button>
+                <button type="button" class="modal-btn modal-no" (click)="closeDel()">{{"Modal.no" | translate}}</button>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+
+<ng-template #alerMarker let-modal >
+    <div class="modal-ctn-padre">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeAlert()"></button>
+        </div>
+        <div class="m-top"></div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{msgError}}</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-acep" (click)="closeAlert()">{{"Modal.acep" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<!-- Modal finalizar -->
+
+<ng-template #finContent let-modal >
+    <form  class="modal-ctn-padre">
+        <div class="modal-ctn">
+            <h2 class="modal-logo"><div class="logo-rodd-modal"></div></h2>
+            <button type="button" class="btn-cancel icon-cancel-circle"  (click)="closeModalFinalizar()"></button>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-contenido-central">
+            <h4 class="modal-title" >{{"Modal.MsgFinPT1" | translate}}</h4>
+        </div>
+        <div class="modal-sep"></div>
+        <div class="modal-btn-ctn">
+            <div class="modal-btns">
+                <button type="button" class="modal-btn modal-yes" (click)="onSubmit()">{{"Modal.si" | translate}}</button>
+                <button type="button" class="modal-btn modal-no" (click)="closeModalFinalizar()">{{"Modal.no" | translate}}</button>
+            </div>
+        </div>
+    </form>
+</ng-template>
+
+
+<!-- Modal Pop Up -->
+
+<ng-template #popUpContent let-modal>
+    <form  class="modal-popup-ctn" (click)="closeModalPopUp()">
+        <div class="popup-close">
+            <span class="btn-cancel-popup icon-clear"></span>
+        </div>
+        <div class="popup-ctn">
+            <h4 class="popup-title-sup">{{"Modal.PopUpTitleSup" | translate}}</h4>
+        </div>
+        <div class="modal-popup-central">
+            <h4 class="modal-title-popup">{{"Modal.PopUpTitleCenterSup" | translate}}</h4>
+            <h4 class="modal-title-popup" >{{"Modal.PopUpTitleCenterInf" | translate}}</h4>
+        </div>
+    </form>
+</ng-template>

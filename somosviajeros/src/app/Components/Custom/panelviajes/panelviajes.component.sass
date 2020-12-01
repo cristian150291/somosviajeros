@@ -1,0 +1,380 @@
+@import "../../../../variables"
+
+// html
+//   font-size: 16px
+
+// .ctn-panel
+//   width: 90%
+//   margin: 0 auto 1rem
+//   border-radius: 4px
+//   @include df()
+//   @include mq($mw-992)
+//     width: 80%
+//   @include mq($mw-1366)
+//     width: 70%
+
+
+// .panel-header-ctn, .panel-footer-ctn
+//   width: 100%
+//   height: 3rem
+//   background-color: transparent
+
+
+// .panel-footer-ctn
+//   background-color: $cl-ter
+
+// .panel-header-ctn
+//   @include df(row,space-between,flex-start)
+//   height: 2.2rem
+
+
+// .panel-header-card-sup
+//   width: 7rem
+//   height: 2rem
+//   @include df(row,flex-start)
+//   background-color: #02996A
+//   padding-left: .5rem
+//   border: thin solid $cl-white
+//   border-radius: 0 0 4px 0
+//   @include mq($mw-580)
+//     width: 8.5rem
+
+// .header-card-title
+//   font-family: $ft-prin
+//   font-size: .8rem
+//   color: $cl-white
+//   font-weight: 500
+
+// .flechas-dobles-peq
+//   margin: 0 .5rem
+
+// .panel-header-title
+//   font-family: $ft-prin
+//   width: 57%
+//   text-align: center
+//   padding-top: .2rem
+//   color: $cl-ter
+//   letter-spacing: 1.5px
+//   font-weight: 600
+
+// .panel-sep
+//   width: 100%
+//   border-bottom: 2px solid $cl-prin
+
+
+// .icon-compare_arrows, .icon-arrow-right
+//   padding: .3rem
+//   font-size: 1.4rem
+//   font-weight: bold
+//   color: $cl-white
+//   @include mq($mw-1024)
+//     padding-left: 1rem
+
+// .icon-arrow-right
+//   font-size: .8rem
+//   padding: .3rem .3rem 0
+//   font-weight: normal
+//   @include mq($mw-1024)
+//     padding-left: 1rem
+
+// .panel-main-ctn
+//   width: 100%
+//   border-radius: 6px
+//   background-color: $cl-white
+//   display: flex
+//   flex-direction: column
+//   justify-content: center
+//   align-items: center
+//   padding-bottom: 1rem
+
+// .panel-input-ciudad
+//   width: 95%
+//   padding-top: 1rem
+//   border-radius: 4px
+//   display: flex
+//   justify-content: center
+//   align-items: center
+
+// .panel-input
+//   width: 15.375rem
+//   height: 2.2rem
+//   border: 1px solid $cl-prin
+//   border-radius: 4px
+//   text-indent: .5rem
+//   font-family: $ft-prin
+
+// .panel-input:focus, .temporal:focus, .people-btn:focus
+//   outline: $cl-prin
+//   border: 2px solid $cl-prin
+
+// .panel-personas-ctn
+//   padding-top: 1rem
+//   width: 95%
+//   display: flex
+//   justify-content: center
+//   align-items: center
+
+// .panel-people
+//   width: 100%
+//   display: flex
+//   justify-content: center
+//   align-items: center
+
+
+// .people-btn
+//   width: 15.375rem
+//   height: 2rem
+//   border: 1px solid $cl-prin
+//   border-radius: 4px
+//   font-family: $ft-prin
+//   font-weight: 600
+//   font-size: .8rem
+//   color: $cl-sext
+//   background-color: $cl-cua
+//   transition: all .5s
+//   @include mq($mw-1024)
+//     &:hover
+//       background-color: $cl-prin
+//       color: $cl-white
+//       transition: all .5s
+// .panel-buttons-ctn
+//   width: 15.375rem
+//   display: flex
+//   justify-content: space-between
+//   align-items: center
+//   padding-top: 1rem
+
+
+// .temporal, .panel-btn-env
+//   width: 7.5rem
+//   height: 2rem
+//   border: 1px solid $cl-prin
+//   border-radius: 4px
+//   font-family: $ft-prin
+//   font-weight: 600
+//   font-size: .8rem
+//   color: $cl-sext
+//   background-color: $cl-cua
+//   @include mq($mw-1024)
+//     &:hover
+//       background-color: $cl-prin
+//       color: $cl-white
+//       transition: all .5s
+
+// .panel-divisor
+//   margin: 1rem 0 .1rem
+//   width: 100%
+//   border-bottom: 1px solid $cl-white
+
+// .panel-footer-enviar-ctn
+//   width: 15.375rem
+//   padding-top: 1rem
+//   display: flex
+//   justify-content: center
+//   align-items: center
+
+// .panel-btn-env
+//   height: 2rem
+//   background-color: $cl-prin
+//   color: $cl-white
+//   @include mq($mw-1024)
+//     &:hover
+//       background-color: #01875D
+//       color: $cl-white
+//       transition: all .5s
+
+// .panel-btn-env:focus
+//   outline: none
+
+
+
+.panel-personas-ctn
+    width: 100%
+    
+
+.panel-people
+    position: relative
+    height: 2.5rem
+    margin-left: 3%
+    margin-bottom: 1.2rem
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    appearance: none
+
+
+input[type=number]
+    -moz-appearance: textfield
+
+.people-input
+    width: 8rem
+    height: 2.5rem
+    border: 1px solid $cl-prin
+    border-radius: 6px
+    text-align: right
+    padding-right: .5rem
+    padding-top: .1rem
+    font-family: $ft-prin
+    @include mq($mw-992)
+        width: 8rem
+        padding-right: .5rem
+        padding-left: 1rem
+
+.people-input:focus
+    outline: none
+
+
+.icon-users
+    position: absolute
+    left: .5rem
+    top: .7rem
+    color: $cl-prin
+
+.people-input:hover + .icon-users
+    @include mq($mw-1024)
+    color: #006e4a
+    transition: all .3s ease-in
+
+.panel-main-ctn
+    width: 95%
+    background-color: $cl-prin
+    margin: 0 auto 1rem
+    border-radius: 6px
+    @include mq($mw-992)
+        display: flex
+        align-items: center
+        padding-top: 1rem
+
+.panel-input-ciudad
+    position: relative
+    margin-left: 3%
+    padding-top: 1rem
+    @include mq($mw-1366)
+        width: 100%
+
+.panel-input
+    width: 97%
+    height: 2.5rem
+    border: none
+    border-radius: 6px
+    position: relative
+    padding-left: 2rem
+    margin-bottom: 1rem
+    font-family: $ft-prin
+    @include mq($mw-992)
+        width: 160%
+    @include mq($mw-1366)
+        width: 180%
+    @include mq(1920px)
+        width: 145%
+
+.panel-input:focus
+    outline: none
+
+.icon-location
+    position: absolute
+    left: 0.5rem
+    top: 1.7rem
+    font-size: 1.2rem
+    color: $cl-prin
+
+.panel-input:hover + .icon-location
+    @include mq($mw-1024)
+    color: #006e4a
+    transition: all .3s ease-in
+
+.panel-buttons-ctn
+    margin-left: 3%
+    @include mq($mw-992)
+        margin-left: 20%
+    @include mq($mw-1366)
+        margin-left: 30%
+
+.title-panel-fecha
+    position: relative
+
+.title-fecha
+    font-size: .8rem
+    color: $cl-white
+    font-family: $ft-prin
+    position: absolute
+    top: 1rem
+
+.fechas-ctn
+    display: flex
+    align-items: center
+    position: relative
+
+.panel-date
+    width: 11rem
+    height: 2.4rem
+    display: flex
+    align-items: center
+
+.form-control
+    height: 2.4rem
+    font-family: $ft-prin
+
+.form-control:focus
+    box-shadow: none
+    border: none
+
+.input-group-append
+    position: relative
+
+.btn-calendar
+    height: 2.4rem
+    margin-right: .5rem
+    margin-left: .2rem
+    width: 2rem
+    background-color: $cl-white
+    border: none
+    border-radius: 6px
+    @include mq($mw-1024)
+    transition: all .3s ease-in
+    &:hover
+        color: #006e4a
+        transition: all .3s ease-in
+
+
+.btn-calendar:focus
+    outline: none
+
+.icon-calendar
+    color: $cl-prin
+
+
+.panel-hours
+    width: 38%
+
+
+.ngb-tp-spacer
+    color: #ffffff !important
+
+
+
+.ngb-tp-chevron
+    @include mq($mw-1024)
+    &:hover
+        color: #006e4a !important
+
+.text-error-ctn
+    position: absolute
+    bottom: -1.2rem
+    z-index: 300
+
+.text-error-ctn2
+    position: absolute
+    z-index: 300
+    bottom: .5rem
+
+.text-error, .text-error2
+    font-family: $ft-prin
+    font-size: .8rem
+    color: orangered
+    font-weight: bold
+    letter-spacing: 1px
+    z-index: 300
+
+.text-error2
+    color: $cl-white

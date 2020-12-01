@@ -1,0 +1,145 @@
+<app-nav-bar-emp></app-nav-bar-emp>
+<div class="ctn-tam">
+    <div class="det-map-ctn">
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-direction *ngFor="let item of rutasMarker"
+              [origin]="item.origin"
+              [destination]="item.destination"
+            >
+            </agm-direction>
+          </agm-map>
+    </div>
+    <div class="det-card-ctn">
+        <div class="det-title-ctn">
+            <h3 class="det-title">Presupuesto para Jazmín</h3>
+            <p class="det-subtitle">Te quedan 2 horas para responder</p>
+        </div>
+        <div class="det-gral-ctn">
+            <div class="det-info-ctn">
+                <div class="det-etiq-ctn">
+                    <h4 class="det-title1">IDA</h4>
+                    <div *ngIf="general[0].vuelta != ''" class="flechas-dobles-peq"></div>
+                    <div *ngIf="general[0].vuelta == ''" class="icon-arrow-right2"></div>
+                    <h4 *ngIf="general[0].vuelta != ''" class="det-title2">VUELTA</h4>
+                </div>
+                <div class="cpm-info-ctn">
+                    <div class="cpm-ini-ctn">
+                        <p class="cpm-fecha">{{general[0].ida.dia}} {{general[0].ida.mes}}</p>
+                        <p class="cpm-ciudad">{{general[0].ida.ciudadInicial}}</p>
+                        <p class="cpm-provincia">{{general[0].ida.provinciaInicial}}</p>
+                        <p class="cpm-horario">{{general[0].ida.horaSalidaInicial}} hrs.</p>
+                    </div>
+                    <div class="cpm-paradas-ctn">
+                        <div class="flecha-ctn"><div class="iconodeflecha"></div></div>
+                        <p class="paradas-title">paradas {{general[0].ida.paradas}}</p>
+                    </div>
+                    <div class="cpm-fin-ctn">
+                        <p class="cpm-fecha">{{general[0].ida.diallegada}} {{general[0].ida.mesllegada}}</p>
+                        <p class="cpm-ciudad">{{general[0].ida.ciudadFinal}}</p>
+                        <p class="cpm-provincia">{{general[0].ida.provinciaFinal}}</p>
+                        <p class="cpm-horario">{{general[0].ida.horaLlegadaFinal}} hrs.</p>
+                    </div>
+                </div>
+                <div class="det-sep"></div>
+                <div class="det-info2-ctn">
+                    <div class="det-info2-grp1">
+                        <h4 class="det-info2-title">{{general[0].tm}} hrs.</h4>
+                        <h5 class="det-info2-subtitle">Tiempo de vieje</h5>
+                    </div>
+                    <div class="det-info2-grp2">
+                        <h4 class="det-info2-title">{{general[0].km}} km</h4>
+                        <h5 class="det-info2-subtitle">Distancia en km</h5>
+                    </div>
+                </div>
+                <div class="det-sep"></div>
+                <div class="det-info3-ctn">
+                    <h4 class="det-info2-title">{{general[0].cantMayores}} Adultos y {{general[0].cantMenores}} niños</h4>
+                    <h5 class="det-info2-subtitle">{{general[0].cantTotal}} Personas en total</h5>
+                </div>
+                <div class="det-sep"></div>
+                <div class="det-info4-ctn">
+                    <div class="det-info4-grp1">
+                        <h4 class="det-info2-title">{{general[0].vehiculo}}</h4>
+                        <h5 class="det-info2-subtitle">Vehículo preferido</h5>
+                    </div>
+                    <div class="det-info4-grp2">
+                        <div class="det-veh"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="det-notas-ctn">
+        <h3 class="det-notas-title">
+            Notas de jazmin
+        </h3>
+        <div class="det-notas-p-ctn">
+            <p class="det-notas-p"> {{dataDetalle.nota}} </p>
+        </div>
+    </div>
+
+    <div class="det-itin-ctn">
+        <h3 class="det-itin-title"> Itinerario</h3>
+        <div class="det-itin-card">
+            <div class="det-itin-card-title-ctn">
+                <h4 class="det-itin-card-title">IDA</h4>
+                <span class="icon-arrow-right2"></span>
+            </div>
+            <h4 class="det-itin-fecha">{{itinerario.ida[0].dia}} {{itinerario.ida[0].mes}}</h4>
+            <div class="det-itin-info-ctn" *ngFor="let item of itinerario.ida[0].data; index as i; count as total" [ngClass]="{ oculto: i >= mosIda, visto : i < mosIda }" >
+                <div class="iconos-ctn" *ngIf="i < mosIda">
+                    <div class="det-itin-info-icon1"></div>
+                    <div class="det-itin-info-icon2" *ngIf="total -1 != i"> </div>
+                </div>
+                <div class="det-itin-info-city-ctn" *ngIf="i < mosIda">
+                    <div class="det-itin-info-city">{{item.ciudad}}, {{item.provincia}} - {{item.hora}} hrs. </div>
+                    <div class="det-itin-info-cant">Recoges {{item.cantidad}} pasajeros</div>
+                </div>
+            </div>
+
+            <div *ngIf="!idaTotal && totalItiIda > 3" class="det-itin-info-mas-ctn" (click)="mostrarIdaTotal()" >
+                <div class="det-itin-info-mas">Mostrar todo </div>
+                <div class="det-itin-info-mas-icon" ></div>
+            </div>
+            <div *ngIf="idaTotal && totalItiIda > 3" class="det-itin-info-mas-ctn" (click)="mostrarIdaTotal()" >
+                <div class="det-itin-info-mas">Mostrar menos </div>
+                <div class="det-itin-info-menos-icon" ></div>
+            </div>
+
+        </div>
+        <div class="det-itin-card" *ngIf="itinerario.vuelta != ''">
+            <div class="det-itin-card-title-ctn">
+                <h4 class="det-itin-card-title">VUELTA</h4>
+                <span class="icon-arrow-left2"></span>
+            </div>
+            <h4 class="det-itin-fecha">{{itinerario.vuelta[0].dia}} {{itinerario.vuelta[0].mes}}</h4>
+            <div class="det-itin-info-ctn" *ngFor="let item of itinerario.vuelta[0].data; index as i; count as total" [ngClass]="{ oculto: i >= mosVue, visto : i < mosVue }" >
+                <div class="iconos-ctn" *ngIf="i < mosVue">
+                    <div class="det-itin-info-icon1"></div>
+                    <div class="det-itin-info-icon2" *ngIf="total -1 != i"> </div>
+                </div>
+                <div class="det-itin-info-city-ctn" *ngIf="i < mosVue">
+                    <div class="det-itin-info-city">{{item.ciudad}}, {{item.provincia}} - {{item.hora}} hrs. </div>
+                    <div class="det-itin-info-cant">Recoges {{item.cantidad}} pasajeros</div>
+                </div>
+            </div>
+
+            <div *ngIf="!vueTotal && totalItiVue > 3" class="det-itin-info-mas-ctn" (click)="mostrarVueltaTotal()" >
+                <div class="det-itin-info-mas">Mostrar todo </div>
+                <div class="det-itin-info-mas-icon" ></div>
+            </div>
+            <div *ngIf="vueTotal && totalItiVue > 3" class="det-itin-info-mas-ctn" (click)="mostrarVueltaTotal()" >
+                <div class="det-itin-info-mas">Mostrar menos </div>
+                <div class="det-itin-info-menos-icon" ></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="det-foo-ctn">
+        <h4 class="det-foo-message">
+            ¡Rápido! 8 empresas ya respondieron
+        </h4>
+        <button class="det-foo-btn" type="button">Cotizar</button>
+    </div>
+</div>

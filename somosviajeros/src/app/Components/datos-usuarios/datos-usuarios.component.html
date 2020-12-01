@@ -1,0 +1,23 @@
+<app-nav-bar-form></app-nav-bar-form>
+<div class="barra-progreso-gran"></div>
+<div class="ctn-tam">
+    <form action="" class="info-ctn" name="userForm" #userForm="ngForm"  (ngSubmit)="onSubmit(userForm)">
+        <div class="info-title-ctn">
+            <h3 class="info-title">{{"Dat-usr-title" | translate}}</h3>
+        </div>
+        <div class="inputs-ctn">
+            <div class="input-ctn">
+                <input type="text" name="nombre" class="input" id="nombre" #nombre="ngModel" [(ngModel)]="datosUserModel.nombre"
+                placeholder="{{'Dat-place-name' | translate}}" autocomplete="off" required>
+            </div>
+            <div class="input-ctn">
+                <input type="text" name="apellido" class="input" id="apellido" #apellido="ngModel" [(ngModel)]="datosUserModel.apellido"
+                placeholder="{{'Dat-place-last' | translate}}" autocomplete="off" required>
+            </div>
+            <div class="btn-ctn">
+                <button type="submit" class="inicio" [disabled]="!userForm.form.valid" >{{"Btn-sig" | translate}}</button>
+            </div>    
+        </div>
+    </form> 
+</div>
+

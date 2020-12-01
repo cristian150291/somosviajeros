@@ -1,0 +1,352 @@
+@import "../../../variables"
+
+.foo-ctn
+    width: 100%
+    height: 15rem
+    background-color: $cl-sext
+    display: grid
+    grid-template-rows: 2.5rem 3fr repeat(3,1fr)
+    padding-top: 1rem
+    @include mq($mw-480)
+        height: 8rem
+        grid-template-rows: 4rem 1rem 2rem
+        grid-template-columns: repeat(4,1fr)
+
+
+
+.foo-logo-ctn
+    grid-row: 1/2
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    @include mq($mw-480)
+        grid-column: 1/2
+
+
+.foo-logo
+    width: 8rem
+    height: 75%
+    @include mq($mw-480)
+        width: 8.5rem
+        height: 2rem
+        align-self: center
+
+.foo-main-ctn
+    grid-row: 2/3
+    width: 100%
+    height: 100%
+    @include mq($mw-480)
+        grid-row: 1/2
+        grid-column: 2/4
+        display: flex
+
+
+.foo-emp-ctn, .foo-legal-ctn, .foo-contacto-ctn
+    width: 100%
+    text-align: center
+    line-height: 10px
+    margin-bottom: .5rem
+    @include mq($mw-480)
+        margin-bottom: 0
+        align-self: center
+
+.foo-emp-title, .foo-legal-title, .foo-contacto-title
+    font-family: $ft-prin
+    font-size: .9rem
+    color: $cl-white
+    letter-spacing: 1px
+    font-weight: 600
+    padding-bottom: .2rem
+
+
+
+.foo-emp-link, .foo-legal-link
+    font-family: $ft-prin
+    font-size: .7rem
+    color: $cl-white
+    letter-spacing: 1px
+
+
+.foo-contacto-ctn
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    @include mq($mw-480)
+        grid-row: 1/2
+        grid-column: 4/5
+
+.foo-icons-ctn
+    display: flex
+    justify-content: center
+    align-items: center
+
+.foo-icon-fb, .foo-icon-insta, .foo-icon-mail
+    color: $cl-white
+    font-size: 1.3rem
+
+.foo-icon-insta
+    margin: 0 .7rem
+
+.icon-mail_outline
+    font-size: 1.7rem
+
+.foo-legal-link:focus, .foo-emp-link:focus, .foo-icon-fb:focus, .foo-icon-insta:focus, .foo-icon-mail:focus
+    outline: none
+    border: none
+    text-decoration: none
+
+.foo-sep
+    grid-row: 4/5
+    width: 100%
+    border-bottom: 1px solid $cl-white
+    margin-bottom: .5rem
+    @include mq($mw-480)
+        grid-row: 2/3
+        grid-column: 1/5
+        margin-bottom: 0
+        align-self: center
+
+.foo-footer-ctn
+    grid-row: 5/6
+    width: 100%
+    text-align: center
+    padding-bottom: .5rem
+    @include mq($mw-480)
+        height: 100%
+        grid-row: 3/4
+        grid-column: 1/5
+        align-self: center
+        justify-self: center
+        padding-bottom: 0
+
+.foo-copy
+    font-family: $ft-prin
+    color: $cl-white
+    font-size: .7rem
+    align-self: center
+    justify-self: center
+//$cl-prin: #FC7A65   //Color primario
+//$cl-sec: #EFEFEF    //Color secundario
+//$cl-ter: #E6E6E6    //Color terciario
+//$cl-cua: #EFEDEA    //Color cuaternario
+//$ft-prin: 'Inter', sans-serif   //Fuente principal
+//$ft-sec: 'Inter', sans-serif    //Fuente secundaria(en este momento no contamos con una)
+//
+//.foo-ctn
+//    width: 100%
+//    background-color: #fafafa
+//
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media ( min-width: 1680px )//Desktop Display
+//
+//.foo-header
+//    width: 100%
+//    display: flex
+//    align-items: center
+//    justify-content: space-between
+//    padding: 2em 1em
+//
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media ( min-width: 1680px )//Desktop Display
+//
+//.foo-logo-title
+//    color: gray
+//    font-family: $ft-prin
+//    font-weight: 600
+//    letter-spacing: 2px
+//    font-size: 1em
+//    &:visited
+//        color: gray
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 580px )//Mobile lasdscape(uso horizontal)
+//        font-size: 1.2em
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//        font-size: 1.4em
+//    @media screen and ( min-width: 992px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//
+//    @media screen and ( min-width: 1280px )//Tablet lasdscape
+//
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media screen and ( min-width: 1680px )//Desktop Display
+//
+//.redes-ctn
+//    width: 50%
+//    display: flex
+//    justify-content: space-evenly
+//    padding-left: 1em
+//    font-size: 1.1em
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 580px )//Mobile lasdscape(uso horizontal)
+//        font-size: 1.3em
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//        font-size: 1.5em
+//    @media screen and ( min-width: 992px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//
+//    @media screen and ( min-width: 1280px )//Tablet lasdscape
+//
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media screen and ( min-width: 1680px )//Desktop Display
+//
+//.links-ctn
+//    width: 100%
+//    display: flex
+//    justify-content: space-between
+//    align-items: flex-start
+//    padding-left: 1em
+//    margin-bottom: 2em
+//    font-family: $ft-prin
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media ( min-width: 1680px )//Desktop Display
+//
+//.recursos-ctn
+//    width: 100%
+//    display: flex
+//    flex-direction: column
+//    line-height: 1.5em
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 580px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//        line-height: 1.7em
+//    @media screen and ( min-width: 992px )//Tablet portrait
+//        line-height: 1.9em
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//        line-height: 2.1em
+//    @media screen and ( min-width: 1280px )//Tablet lasdscape
+//        line-height: 2.3em
+//    @media screen and ( min-width: 1366px )//Laptop display
+//        line-height: 2.7em
+//    @media screen and ( min-width: 1680px )//Desktop Display
+//        line-height: 2.9em
+//.grupo2-ctn
+//    width: 100%
+//    display: flex
+//    flex-direction: column
+//    line-height: 1.5em
+//    padding-left: 2.5em
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 580px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//        line-height: 1.7em
+//    @media screen and ( min-width: 992px )//Tablet portrait
+//        line-height: 1.9em
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//        line-height: 2.1em
+//    @media screen and ( min-width: 1280px )//Tablet lasdscape
+//        line-height: 2.3em
+//    @media screen and ( min-width: 1366px )//Laptop display
+//        line-height: 2.5em
+//    @media screen and ( min-width: 1680px )//Desktop Display
+//        line-height: 2.7em
+//.links-titles
+//    font-size: 1em
+//    font-weight: 700
+//    font-family: $ft-prin
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 580px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//        font-size: 1.5em
+//    @media screen and ( min-width: 992px )//Tablet portrait
+//        font-size: 1.7em
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//        font-size: 1.9em
+//    @media screen and ( min-width: 1280px )//Tablet lasdscape
+//        font-size: 2.1em
+//    @media screen and ( min-width: 1366px )//Laptop display
+//        font-size: 2.3em
+//    @media screen and ( min-width: 1680px )//Desktop Display
+//
+//.div-separacion
+//    margin-bottom: 1em
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media ( min-width: 1680px )//Desktop Display
+//
+//.foo-links
+//    font-size: .8em
+//    color: gray
+//    font-family: $ft-prin
+//    &:visited
+//        color: gray
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 580px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//        font-size: 1em
+//    @media screen and ( min-width: 992px )//Tablet portrait
+//        font-size: 1.2em
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//        font-size: 1.4em
+//    @media screen and ( min-width: 1280px )//Tablet lasdscape
+//        font-size: 1.6em
+//    @media screen and ( min-width: 1366px )//Laptop display
+//        font-size: 1.8em
+//    @media screen and ( min-width: 1680px )//Desktop Display
+//
+//.copy-ctn
+//    width: 100%
+//    display: flex
+//    justify-content: center
+//    align-items: center
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media ( min-width: 1680px )//Desktop Display
+//
+//.copy-title
+//    width: 100%
+//    font-size: 3vw
+//    text-align: center
+//    font-family: $ft-prin
+//    color: gray
+//    @media screen and ( min-width: 480px )//Mobile lasdscape(uso horizontal)
+//
+//    @media screen and ( min-width: 768px )//Tablet portrait
+//
+//    @media screen and ( min-width: 1024px )//Tablet lasdscape
+//    @media screen and ( min-width: 1366px )//Laptop display
+//
+//    @media ( min-width: 1680px )//Desktop Display

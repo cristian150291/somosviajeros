@@ -1,0 +1,104 @@
+<div class="navbar-ctn">
+    <div class="navbar-icons-ctn">
+        <a class="a-title" [routerLink]="['/home']"><div class="logo-rodd"></div></a>
+
+        <div class="navbar-subicons-ctn" >
+            <span class="name-navbar">{{ nameUser }}</span>
+            <app-banderas></app-banderas>
+            <div class="icon-user-noimg2" *ngIf="imgUser==''" (click)="toggle()"><span class="icon-user"></span></div>
+            <img class="img-user2" src="{{imgUser}}" alt="" *ngIf="imgUser!=''" (click)="toggle()">
+            <!--<div class="icon-user menu-icon" (click)="toggle()"></div>-->
+            <nav class="menu-item-ctn" >
+                <ul class="items-menu-ctn2" [@entrada]="isOpen">
+                    <li class="items-menu">
+                        <a class="a-menu" [routerLink]="['/home-empresa/nuevaempresa/update']">{{"NavBar.dat-bas" | translate}}</a>
+                    </li>
+                    <li class="items-menu">
+                        <a class="a-menu" [routerLink]="['/home-empresa/puntotrabajo1/update']">{{"NavBar.punt" | translate}}</a>
+                    </li>
+                    <li class="items-menu">
+                        <a class="a-menu" [routerLink]="['/home/logout']">{{"NavBar.cer-ses" | translate}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="menu-item-ctn-dtp" >
+                <ul class="items-menu-ctn-dtp">
+                    <li class="items-menu-dtp">
+                        <div class="icon-user-noimg" *ngIf="imgUser==''"><span class="icon-user"></span></div>
+                        <img class="img-user" src="{{imgUser}}" alt="" *ngIf="imgUser!=''">
+                        <ul class="sub-menu-dtp">
+                            <li class="menu-item-dtp">
+                                <a class="menu-link-dtp" [routerLink]="['/home-empresa/nuevaempresa/update']">{{"NavBar.dat-bas" | translate}}</a>
+                            </li>
+                            <li class="menu-item-dtp">
+                                <a class="menu-link-dtp" [routerLink]="['/home-empresa/puntotrabajo1/update']">{{"NavBar.punt" | translate}}</a>
+                            </li>
+                            <li class="menu-item-dtp">
+                                <a class="menu-link-dtp" [routerLink]="['/home/logout']">{{"NavBar.cer-ses" | translate}}</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--<div class="navbar-ctn">-->
+<!--    <div class="navbar-icons-ctn">-->
+<!--        <a class="a-title" [routerLink]="['/home']"><div class="logo-rodd"></div></a>-->
+<!--        <div class="navbar-subicons-ctn">-->
+<!--            <span class="name-navbar">{{ userName }}</span>-->
+<!--            <app-banderas></app-banderas>-->
+<!--            <div class="icon-user menu-icon" (click)="toggle()"  ></div>-->
+<!--            <nav class="menu-item-ctn" >-->
+<!--                <ul class="items-menu-ctn" [@entrada]="isOpen">-->
+<!--                    <li class="items-menu">-->
+<!--                        <p class="a-menu">{{"NavBar.config" | translate}}</p>-->
+<!--                        <ul class="sub-menu">-->
+<!--                            <li class="menu-item">-->
+<!--                                <a class="menu-link" [routerLink]="['/home-empresa/nuevaempresa/update']">{{"NavBar.dat-bas" | translate}}</a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item">-->
+<!--                                <a href="#" class="menu-link" [routerLink]="['/home-empresa/puntotrabajo1/update']">{{"NavBar.punt" | translate}}</a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item">-->
+<!--                                <a href="#" class="menu-link" [routerLink]="['/home-empresa/quienessomos']">{{"NavBar.somos" | translate}}</a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item-dtp">-->
+<!--                                <a href="#" class="menu-link" [routerLink]="['/home-empresa/flota']">{{"NavBar.flota" | translate}}</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                    <li class="items-menu">-->
+<!--                        <a class="a-menu" [routerLink]="['/home/logout']">{{"NavBar.cer-ses" | translate}}</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--            <nav class="menu-item-ctn-dtp" >-->
+<!--                <ul class="items-menu-ctn-dtp">-->
+<!--                    <li class="items-menu-dtp">-->
+<!--                        <p class="a-text-dtp">{{"NavBar.config" | translate}}</p>-->
+<!--                        <ul class="sub-menu-dtp">-->
+<!--                            <li class="menu-item-dtp">-->
+<!--                                <a class="menu-link-dtp" [routerLink]="['/home-empresa/nuevaempresa/update']">{{"NavBar.dat-bas" | translate}}</a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item-dtp">-->
+<!--                                <a href="#" class="menu-link-dtp"[routerLink]="['/home-empresa/puntotrabajo1/update']">{{"NavBar.punt" | translate}}</a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item-dtp">-->
+<!--                                <a href="#" class="menu-link-dtp" [routerLink]="['/home-empresa/quienessomos']">{{"NavBar.somos" | translate}}</a>-->
+<!--                            </li>-->
+<!--                            <li class="menu-item-dtp">-->
+<!--                                <a href="#" class="menu-link-dtp" [routerLink]="['/home-empresa/flota']">{{"NavBar.flota" | translate}}</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                    <li class="">-->
+<!--                        <a class="a-text-dtp" [routerLink]="['/home/logout']">{{"NavBar.cer-ses" | translate}}</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

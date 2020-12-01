@@ -1,0 +1,1421 @@
+@import "variables"
+//Reset general de estilos
+*
+    list-style: none
+    text-decoration: none
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+p, h1, h2, h3, h4, h5
+    margin: 0 !important
+a:link, a:visited, a:active
+    text-decoration: none
+
+//Mixins
+
+@mixin iconos-prin($url)
+    background-image: $url
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+
+@mixin  iconos-sec($url)
+    background-image: $url
+    background-repeat: no-repeat
+    background-position: center center
+
+
+//Iconos con imagenes
+//Aqui agregamos los iconos que son imagenes y no pertenecen a icomoon.
+.ico-arg
+    @include iconos-prin(url("assets/img/banderas/argentina.svg"))
+
+.ico-bra
+    @include iconos-prin(url("assets/img/banderas/brazil.svg"))
+
+.ico-eeuu
+    @include iconos-prin(url("assets/img/banderas/united-states-of-america.svg"))
+
+.ico-fb
+    @include iconos-prin(url("assets/white/PNG/f_logo_RGB-White_114.png"))
+
+.ico-goo
+    @include iconos-prin(url("assets/vector/btn_google_light_pressed_ios2.svg"))
+
+.flechas-dobles-peq
+    width: 1.3rem
+    height: 1.3rem
+    @include iconos-prin(url("assets/img/iconos/flecha-doble-peq.svg"))
+    margin: 0 .8rem
+
+.det-veh
+    width: 7rem
+    height: 5rem
+    @include iconos-sec(url("assets/img/iconos/combi.svg"))
+
+.det-itin-info-icon1
+    width: 1rem
+    height: 1rem
+    @include iconos-sec(url("assets/img/iconos/Ellipse.svg"))
+
+.det-itin-info-icon2
+    width: 1rem
+    height: 4rem
+    @include iconos-sec(url("assets/img/iconos/flecha-larga-abajo.svg"))
+
+.det-itin-info-mas-icon
+    width: 1rem
+    height: 1rem
+    @include iconos-sec(url("assets/img/iconos/flecha-mostrar.svg"))
+
+.det-icon-info-mas-black
+    width: 1rem
+    height: 1rem
+    @include iconos-sec(url("assets/img/iconos/punta-flecha-negro.svg"))
+
+.det-itin-info-menos-icon
+    width: 1rem
+    height: 1rem
+    @include iconos-sec(url("assets/img/iconos/flecha-mostrar.svg"))
+    transform: rotate(180deg)
+
+.det-icon-info-menos-black
+    width: 1rem
+    height: 1rem
+    @include iconos-sec(url("assets/img/iconos/punta-flecha-negro.svg"))
+    transform: rotate(180deg)
+
+.logo-rodd
+    width: 6rem
+    height: 2rem
+    @include iconos-prin(url("assets/img/logo2.png"))
+    margin-left: .5rem
+    margin-top: 2px
+
+.logo-rodd-modal
+    width: 4rem
+    height: 1.5rem
+    @include iconos-prin(url("assets/img/logo2.png"))
+    margin-left: .5rem
+
+.check-green
+    @include iconos-prin(url("assets/img/iconos/check-verde.svg"))
+    width: 1rem
+    height: 1rem
+
+//Color y medida del html
+html
+    width: 100%
+    height: 100%
+    background-color: $cl-sec
+    font-size: 16px
+
+//Contendor general. Contiene medidas de la pantalla segun su tamaño. En dispositivos grandes se producen dos franjas a los lados.
+.ctn-gral
+    width: 100%
+    height: 100%
+    background-color: $cl-sec
+    //@include mq($mw-1366) //Laptop display
+    //    display: grid
+    //    grid-template-columns: 5% 90% 5%
+
+// Segundo contenedor general, se debe usar si se decesa dejar las franjas blancas a los lados en dispositivos grandes.
+.ctn-center
+    width: 100%
+    @include mq($mw-1366) //Laptop display
+        grid-column: 2/3
+        display: grid
+        grid-template-columns: repeat(10, 10%)
+
+
+
+//Contedor hijo de .ctn-center ocupa el ancho de la grid en dispositivos grandes
+.ctn-total
+    width: 100%
+    @include mq($mw-1366) //Laptop display
+        grid-column: 1/11
+
+//Contendor de navbar(se deberia crear un div contendor para poder centrarlo bien en dispositivos grandes).
+.navbar, .navbar-form-ctn
+    @include mq($mw-1366) //Laptop display
+        grid-column: 2/4
+
+//Contendor de cabecera
+.ctn-header, .ctn-header-emp
+    width: 100%
+    height: 12rem
+    overflow: hidden
+    margin-top: 3.5rem
+    position: relative
+    @include mq(479px)
+      height: 15rem
+    @include mq(579px)
+      height: 17rem
+    @include mq(647px)
+      height: 18rem
+    @include mq(991px)
+      height: 19rem
+    @include mq(1023px)
+      height: 20rem
+    @include mq(1279px)
+      height: 21rem
+    @include mq(1365px)
+      height: 22.5rem
+    @include mq(1679px)
+      height: 24.5rem
+    @include mq(1919px)
+      height: 26.5rem
+
+.img-header
+    width: 100%
+    height: 100%
+    top: 0
+    position: absolute
+    background-image: url("assets/img/home/busroad479.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    @include mq(479px)
+        background-image: url("assets/img/home/busroad579.jpg")
+    @include mq(579px)
+        background-image: url("assets/img/home/busroad647.jpg")
+    @include mq(647px)
+        background-image: url("assets/img/home/busroad767.jpg")
+    @include mq(767px)
+        background-image: url("assets/img/home/busroad991.jpg")
+    @include mq(991px)
+        background-image: url("assets/img/home/busroad1023.jpg")
+    @include mq(1023px)
+        background-image: url("assets/img/home/busroad1279.jpg")
+    @include mq(1279px)
+        background-image: url("assets/img/home/busroad1365.jpg")
+    @include mq(1365px)
+        background-image: url("assets/img/home/busroad1679.jpg")
+    @include mq(1679px)
+        background-image: url("assets/img/home/busroad1919.jpg")
+    @include mq(1919px)
+        background-image: url("assets/img/home/busroad3840.jpg")
+
+.img-header-emp
+    width: 100%
+    height: 100%
+    top: 0
+    position: absolute
+    background-image: url("assets/img/home-emp/home-empresa479.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    @include mq(479px)
+        background-image: url("assets/img/home-emp/home-empresa579.jpg")
+    @include mq(579px)
+        background-image: url("assets/img/home-emp/home-empresa647.jpg")
+    @include mq(647px)
+        background-image: url("assets/img/home-emp/home-empresa767.jpg")
+    @include mq(767px)
+        background-image: url("assets/img/home-emp/home-empresa991.jpg")
+    @include mq(991px)
+        background-image: url("assets/img/home-emp/home-empresa1024.jpg")
+    @include mq(1023px)
+        background-image: url("assets/img/home-emp/home-empresa1279.jpg")
+    @include mq(1279px)
+        background-image: url("assets/img/home-emp/home-empresa1365.jpg")
+    @include mq(1365px)
+        background-image: url("assets/img/home-emp/home-empresa1679.jpg")
+    @include mq(1679px)
+        background-image: url("assets/img/home-emp/home-empresa1919.jpg")
+    @include mq(1919px)
+        background-image: url("assets/img/home-emp/home-empresa3000.jpg")
+
+//Botones de cabecera(se cambiara a fututo segun la evolucion del diseño).
+.btn-header
+    width: 100%
+    @include df(row,flex-end,stretch)
+    z-index: 50
+    position: absolute
+    top: 0
+
+
+//Clases de botones en la cabecera del home usuario(misma situacion que arriba).
+
+
+.btn-header-empresas, .btn-header-via
+    padding: 0 .5rem
+    height: 1.5rem
+    border: none
+    font-family: $ft-prin
+    font-size: .5rem
+    font-weight: 500
+    border-radius: 0 0 0 6px
+    border-top: 2.5px solid $cl-prin
+    background-color: #fafafa
+    @include mq($mw-480) //Mobile lasdscape(uso horizontal)
+        font-size: .6rem
+    @include mq($mw-1280) //Tablet lasdscape
+        font-size: .62rem
+
+//Focus - outline: none se utilza para quitar la seleccion del elemento en chrome y otro navegadores.
+.btn-header-via:focus, .btn-header-empresas:focus, .inicio:focus, .registrarse:focus,  .login-rs:focus,
+.btn-reg:focus, .input:focus, .input-viaje:focus, .select-opt:focus, .btn-cancel:focus, .select-cot:focus,
+.ng-select-container:focus, .rs-modal:focus, .input-point
+    outline: none
+
+.btn-header-via
+    @include mq($mw-480)
+        margin-bottom: 1.5rem
+        font-size: .7rem
+    @include mq($mw-768)
+        font-size: .8rem
+    @include mq($mw-1280)
+        margin-bottom: 1rem
+
+
+.sombra
+    width: 100%
+    height: 6rem
+    background-color: rgba(0,0,0,.4)
+    z-index: 100
+    position: absolute
+    bottom: 0
+    @include mq($mw-480)
+        height: 5rem
+    @include mq($mw-992)
+        height: 5.5rem
+    @include mq($mw-1280)
+        height: 6rem
+
+.title-input-ctn
+    width: 100%
+    margin: 0 auto
+    z-index: 100
+    bottom: 2.2rem
+    padding: .5rem 0
+    position: absolute
+    @include mq($mw-768)
+        bottom: 2.5rem
+    @include mq($mw-992)
+        bottom: 3rem
+    @include mq($mw-1280)
+        bottom: 3rem
+    @include mq($mw-1366)
+        bottom: 3.2rem
+.title-input-ctn-emp
+    width: 100%
+    margin: 0 auto
+    z-index: 100
+    bottom: 0
+    padding: .5rem 0
+    position: absolute
+    background-color: rgba(0,0,0,.4)
+
+.title-gral, .title-gral-emp
+    width: 100%
+    text-align: left
+    font-family: $ft-prin
+    font-size: 1rem
+    line-height: 1.5rem
+    color: $cl-white
+    padding-left: 1rem
+    letter-spacing: .5px
+    @include mq($mw-480)
+        width: 100%
+        font-size: .9rem
+        & br
+            display: none
+    @include mq($mw-580)
+        padding-left: 0
+        text-align: center
+        font-size: 1rem
+    @include mq($mw-768)
+        font-size: 1.3rem
+        letter-spacing: 1px
+    @include mq($mw-992)
+        font-size: 1.5rem
+    @include mq($mw-1280)
+        font-size: 1.7rem
+
+.title-gral-emp
+    text-align: center
+    font-weight: 500
+    font-size: .9rem
+    @include mq(330px)
+        font-size: 1rem
+    @include mq(360px)
+        font-size: 1rem
+        font-weight: 600
+    @include mq($mw-480)
+        font-size: 1.3rem
+        font-weight: 600
+    @include mq($mw-580)
+        text-align: left
+        font-size: 1.5rem
+.input-header-ctn
+    width: 100%
+    position: relative
+
+.input-viaje
+    width: 100%
+    height: 3rem
+    border: none
+    z-index: 100
+    padding-left: .5rem
+    border-radius: 6px
+    font-family: $ft-prin
+    font-size: .9rem
+    display: none
+
+
+//Aplicando estilos al icono(lupa en este caso). Los iconos tienen las mismas propiedades que las fuentes.
+
+.icon-search
+    position: absolute
+    right: .5rem
+    top: .5rem
+    color: $cl-white
+    background-color: $cl-prin
+    padding: .3rem
+    border-radius: 2px
+    z-index: 60
+
+//Contendor de formularios
+.form-ctn .form-ctn-login
+    width: 100%
+    @include df(column,flex-start,center)
+    background-color: $cl-sec
+    padding-top: 1rem
+
+.form-ctn-login
+    background-color: $cl-white
+
+//Contendor de titulos
+.title-ctn
+    width: 80%
+    z-index: 100
+    @include mq($mw-768)
+        margin-top: 0
+    @include mq($mw-1366)
+        width: 100%
+
+.title-ctn-emp
+    width: 100%
+    z-index: 100
+    @include mq($mw-768)
+        margin-top: 0
+    @include mq($mw-1366)
+        width: 100%
+
+//Titulo de formularios
+.form-title
+    width: 100%
+    font-size: 1.2rem
+    font-family: $ft-prin
+    text-align: center
+    color: black
+    font-weight: 600
+    @include mq($mw-480)
+        font-size: 1.3rem
+    @include mq($mw-580)
+        font-size: 1.7rem
+    @include mq($mw-768)
+        margin: 0
+        font-size: 1.9rem
+    @include mq($mw-992)
+        font-size: 2.1rem
+    @include mq($mw-1024)
+        font-size: 2.3rem
+
+
+//Contendor de varios inputs
+.inputs-ctn
+    width: 100%
+    @include df()
+    margin: 1rem 0
+
+
+//Contenedor de un input
+.input-ctn
+    width: 100%
+    @include df()
+    margin-bottom: .5rem
+    z-index: 100
+    background-color: $cl-sec
+
+.input, .input-point, .input-login-modal
+    width: 16rem
+    height: 2.5rem
+    font-family: $ft-sec
+    background-color: $cl-white
+    border: none
+    border-radius: 6px
+    font-size: .8rem
+    font-weight: 500
+    letter-spacing: .5px
+    color: $cl-gray
+    text-align: center
+    filter: none
+    &:placeholder-shown
+        color: $cl-gray
+        text-align: center
+        font-size: .8rem
+        font-family: $ft-prin
+    @include mq($mw-480)
+        &::placeholder
+            font-size: .9rem
+    @include mq($mw-580)
+        width: 22rem
+        height: 2.7rem
+        &::placeholder
+            font-size: .9rem
+    @include mq($mw-1024)
+        font-size: 1rem
+        &::placeholder
+            font-size: 1rem
+
+.input-login-modal
+    background-color: $cl-sec
+
+.input-login-modal:focus
+    outline: none
+    -moz-outline: none
+    border: 1px solid $cl-prin
+
+.input:focus
+    padding-left: .5rem
+    color: $cl-gray
+    border: 1px solid $cl-prin
+
+.password
+    font-size: 1.5rem
+
+// Hack necesario para que en los navegaros chrome no se vean los estilos que este le agrega a los input por defecto.
+input:-webkit-autofill
+    background-color: $cl-white !important
+    -webkit-text-fill-color: $cl-gray !important
+    font-size: .9rem
+    -webkit-box-shadow: 0 0 0 100px $cl-white inset !important
+
+
+
+.input-point
+    @include mq($mw-480)
+        width: 18rem
+    @include mq($mw-580)
+        width: 20rem
+        &::placeholder
+            font-size: 1rem
+    @include mq($mw-768)
+        width: 22rem
+
+//Contendor de botones
+.btn-ctn
+    width: 80%
+    margin: 0 auto
+    @include df(column,space-evenly,center)
+    z-index: 100
+    @include mq($mw-768)
+        width: 60%
+    @include mq($mw-1024)
+        width: 80%
+    @include mq($mw-1366)
+        width: 90%
+
+.inicio,.registrarse, .login-rs, .rs-modal
+    width: 16rem
+    height: 2.5rem
+    border-radius: 4px
+    margin-bottom: .5rem
+    font-size: .9rem
+    font-family: $ft-sec
+    font-weight: 700
+    letter-spacing: 2px
+    color: black
+    cursor: pointer
+
+    @include mq($mw-580)
+        width: 22rem
+        height: 2.7rem
+
+.sub-title
+
+    margin: .5rem auto
+    font-weight: 500
+    font-family: $ft-prin
+    color: $cl-gray
+
+    @include mq($mw-1280)
+        cursor: pointer
+
+.login-rs
+    @include df(row,flex-start,center)
+    background-color: $cl-white
+    position: relative
+    letter-spacing: 1px
+    color: $cl-prin
+
+.FB
+    background-color: #4267b2
+    color: $cl-white
+    border: none
+    transition: all .5s ease-out
+    @include mq($mw-1280)
+        &:hover
+            background-color: #254484
+            color: $cl-white
+            transition: all .5s ease-in
+
+.Goo
+    color: $cl-gray
+    border: 1.5px solid $cl-gray
+    transition: all .5s ease-out
+    @include mq($mw-1280)
+        &:hover
+            background-color: #01875D //#C85A49
+            color: $cl-white
+            transition: all .5s ease-in
+
+//Posibles colores para botones de registro con redes sociales.
+// .Goo
+//     border: 1.5px solid $cl-prin
+//      //border-image:   linear-gradient(to right, #D50F25 25%, #EEB211 25%, #EEB211 50%, #009925 50%, #009925 75%,  #3369E8 75%) 5
+
+// .FB
+//     border: 1.5px solid $cl-prin
+//      //border-color: #1877F2
+
+.texto-rs
+    width: 100%
+    @include df(row,center,stretch)
+    @include mq($mw-768)
+        font-size: 0.9rem
+    @include mq($mw-992)
+        font-size: 1rem
+
+.text-fb
+    @include mq($mw-480)
+        margin-left: 1rem
+
+.logo-rs
+    width: 2rem
+    height: 1.8rem
+    position: absolute
+    margin-left: .3rem
+    border: none
+
+
+
+.inicio, .rs-modal
+    background-color: $cl-prin
+    border: none
+    margin: 0
+    color: $cl-white
+    transition: all .5s ease-out
+    @include mq($mw-580)
+        font-size: 1.1rem
+    @include mq($mw-1280)
+        &:hover
+            background-color: #01875D //#C85A49
+            border: 1px solid $cl-prin
+            transition: all .5s ease-in
+
+.registrarse
+    color: $cl-prin
+    background-color: #fafafa
+    border: 1.5px solid $cl-prin
+    transition: all .5s ease-out
+    @include mq($mw-580)
+        font-size: 1.1rem
+    @include mq($mw-1280)
+        &:hover
+            background-color: #01875D //#C85A49
+            color: $cl-white
+            transition: all .5s ease-in
+
+//COMPONENTES DE INFORMACION
+.info-ctn
+    width: 100%
+    @include df(column,flex-start,center)
+    background-color: $cl-sec
+    padding-top: 1.5rem
+
+
+.info-title-ctn, .info-title-ctn2
+    width: 100%
+    margin: 0 auto 1rem
+    padding-left: 1rem
+    padding-top: 1rem
+    @include mq($mw-480)
+        padding-left: 0
+        text-align: center
+
+.info-title-ctn2
+    @include mq($mw-480)
+        padding-left: 1rem
+        text-align: left
+        margin-bottom: .5rem
+
+.info-title, .info-title2
+    width: 100%
+    font-size: 1rem
+    font-family: $ft-prin
+    font-weight: 700
+    line-height: 1.2rem
+    color: $cl-sext
+    @include mq($mw-480)
+        font-size: 1.05rem
+    @include mq($mw-580)
+        font-size: 1.2rem
+    @include mq($mw-768)
+        font-size: 1.5rem
+        line-height: 1.5rem
+    @include mq($mw-992)
+        font-size: 1.7rem
+        line-height: 2rem
+
+.info-title2
+    line-height: 1.5rem
+
+.info-text-ctn
+    width: 100%
+    padding: 0 .5rem 1rem 1rem
+
+.info-text-ctn2
+    width: 90%
+    margin: 0 auto 1rem
+    text-align: center
+
+.info-text, .info-text2
+    width: 100%
+    font-family: $ft-prin
+    font-size: .9rem
+    line-height: 1rem
+    color: $cl-gray
+
+.info-text2
+    font-size: 1rem
+    @include mq($mw-768)
+        line-height: 1.5rem
+        font-size: 1.2rem
+
+.cirlulos-ctn
+    width: 100%
+    @include df(row,space-around,stretch)
+    padding-bottom: 1rem
+
+
+.circulos
+    width: 3rem
+    height: 3rem
+    background-color: #C4C4C4
+    border-radius: 50%
+
+.cajas, .cajas2
+    width: 90%
+    height: 30rem
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    margin: 0 auto 1rem auto
+
+.cajas2
+    background-image: url("assets/img/viajero.jpg")
+
+
+.cajas
+    background-image: url("assets/img/bus.jpg")
+
+.info-ctn, .puntos-ctn
+    width: 100%
+    @include df(column,center,stretch)
+    padding-bottom: 1.5rem
+
+.bacco-cl-ter
+    background-color: $cl-ter
+
+.bacco-white
+    background-color: $cl-white
+    width: 100%
+
+// Registrate gratis
+.reg-ctn
+    width: 100%
+    background-color: $cl-prin //#fb7b63
+    padding: 2.5rem 1rem 2rem
+    @include df(column,flex-start,flex-start)
+
+.text-reg
+    font-family: $ft-prin
+    font-size: 1.3rem
+    font-weight: 600
+    color: #fafafa
+    line-height: 1.5rem
+
+.btn-reg
+    font-family: $ft-prin
+    width: 50%
+    height: 2.4rem
+    border: none
+    border-radius: 3px
+    font-size: .8rem
+    font-weight: 700
+    background-color: #fafafa
+    margin-top: .5rem
+    @include mq($mw-580)
+        width: 40%
+    @include mq($mw-768)
+        width: 30%
+    @include mq($mw-992)
+        width: 25%
+    @include mq($mw-1280)
+        width: 20%
+
+// FOOTER
+.select-ctn
+    width: 100%
+    @include df()
+    padding-bottom: 1rem
+
+.label-select
+    width: 100%
+    text-align: center
+    font-size: 1rem
+    font-family: $ft-prin
+    font-weight: 700
+    line-height: .7rem
+
+.select-opt
+    min-width: 80%
+    max-width: 80%
+
+.ctn-tam
+    width: 100%
+    min-height: 15rem
+    padding-top: 3.5rem
+
+.foo-logo
+    background-image: url("assets/img/logoblanco.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+
+//Estilos de bootstrap para un modal.
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap'
+
+.modal-dialog
+    width: 100%
+    position: relative
+    top: 15%
+    @include df(row,center,center)
+
+
+.modal-content
+    width: 100%
+    height: 100%
+    border: none !important
+    background-color: transparent !important
+
+.modal-ctn-padre
+    width: 100%
+    height: 100%
+    background-color: white
+    border-radius: 1rem
+
+.modal-ctn
+    width: 100%
+    height: 2rem
+    @include df(row,space-between)
+    padding: 1rem
+    margin-top: .5rem
+    background-color: white
+    border-radius: 1rem
+
+
+.modal-title, .modal-subtitle
+    font-family: $ft-prin
+    font-size: 1.2rem
+    font-weight: 600
+    text-align: center
+    letter-spacing: 1px
+    color: #595B5D
+    padding: 0 1rem
+
+.modal-subtitle
+    font-size: .8rem
+    padding-top: 1rem
+    color: orangered
+
+.modal-input
+    width: 80%
+    height: 2rem
+    background-color: $cl-ter
+    border: none
+    font-family: $ft-prin
+    border-radius: 6px
+    margin-top: .5rem
+    text-align: center
+    &::placeholder
+        text-align: center
+
+.modal-input:focus
+    outline: none
+
+.icon-cancel-circle
+    font-size: 1.05rem
+
+.btn-cancel
+    background: none
+    border: none
+    margin: 0
+    padding: 0
+    color: #595B5D
+
+.modal-sep
+    width: 80%
+    border-bottom: 1.3px solid #595B5D
+    margin: 1rem auto
+
+.modal-contenido-central
+    width: 100%
+    @include df()
+
+.modal-btn-ctn
+    width: 100%
+    @include df(row,center,stretch)
+    margin: 1rem 0
+
+
+.modal-btns
+    width: 50%
+    @include df(row,space-around,stretch)
+
+.modal-btn
+    width: 4rem
+    height: 2rem
+    border: none
+    border-radius: 1rem
+    font-family: $ft-prin
+    font-size: 1rem
+    font-weight: 600
+    color: $cl-white
+    letter-spacing: 2px
+
+.modal-btn:focus
+    outline: none
+
+.modal-yes
+    background-color: $cl-prin
+
+.modal-no
+    border: 2px solid $cl-prin
+    color: $cl-prin
+    background-color: $cl-white
+
+.modal-acep
+    width: 100%
+    color: $cl-white
+    background-color: $cl-prin
+    @include mq($mw-1024)
+        background-color: $cl-white
+        border: 2px solid $cl-prin
+        color: $cl-prin
+        &:hover
+            background-color: $cl-prin
+            color: $cl-white
+
+.modal-rs-ctn
+    width: 100%
+    @include df()
+
+.m-top
+    margin-top: 1rem
+
+
+
+.modal-popup-ctn
+    width: 14rem
+    height: 14rem
+    margin: 5rem auto 0
+    background-color: $cl-prin
+    border-radius: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.popup-close
+    width: 100%
+    display: flex
+    justify-content: flex-end
+
+.popup-ctn
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.btn-cancel-popup
+    background: none
+    border: none
+    color: $cl-white
+    margin-right: 2rem
+
+.btn-cancel-popup:focus
+    outline: none
+
+.modal-popup-central
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+
+.modal-title-popup
+    font-family: $ft-prin
+    font-size: .9rem
+    color: $cl-white
+    font-weight: 500
+    text-align: center
+    padding: .5rem .5rem .7rem
+    letter-spacing: 1px
+
+.popup-title-sup
+    font-family: $ft-prin
+    font-size: 1.2rem
+    text-decoration: underline
+    font-weight: 500
+    text-align: center
+    color: $cl-white
+    padding-bottom: 1rem
+
+
+//Dashboard
+.iconodeflecha
+    width: 100%
+    height: 100%
+    @include iconos-prin(url("assets/img/iconos/flecha-larga-derecha.svg"))
+
+.ppp
+    width: 2rem
+    height: 2rem
+
+.navbar-icon-ctn
+    display: flex
+    align-items: center
+
+
+.name-navbar
+    font-family: $ft-prin
+    font-weight: bold
+    letter-spacing: 1px
+    color: $cl-gray
+    margin-right: .5rem
+    font-size: .8rem
+    text-transform: capitalize
+
+
+.espacio
+    display: none
+    @include mq($mw-992)
+        display: block
+        padding-right: 1rem
+.PT2-BTN
+    font-size: .5rem
+
+//Navbars
+
+.navbar-ctn
+    width: 100%
+    height: 3.5rem
+    background-color: $cl-white
+    position: fixed
+    z-index: 200
+    top: 0
+    //@include mq($mw-1366)
+    //    width: 90%
+
+
+.navbar-icons-ctn
+    width: 100%
+    height: 100%
+    margin: 0
+    @include df(row,space-between,center)
+
+.navbar-subicons-ctn
+    width: 100%
+    @include df(row,flex-end,center)
+
+.menu-item-ctn
+    width: 100%
+    height: 0
+    position: absolute
+    top: 3.5rem
+    @include mq($mw-1024)
+        display: none
+
+.menu-icon
+    margin: 0 .5rem
+    @include mq($mw-1024)
+        display: none
+
+.items-menu-ctn, .items-menu-ctn2
+    background-color: $cl-white
+    position: relative
+    align-items: flex-end
+    padding-right: .8rem
+    height: 6.2rem
+    text-align: left
+    border-bottom: 2px solid $cl-prin
+
+.items-menu-ctn2
+    height: 2.5rem
+
+.items-menu
+    width: 7.5rem
+    position: relative
+    text-align: right
+
+.a-menu
+    color: gray
+    font-family: $ft-prin
+    font-size: 1em
+    font-weight: 500
+    cursor: pointer
+
+.sub-menu
+    top: 0
+    right: 7.5rem
+    width: 8rem
+    height: 2rem
+    position: absolute
+    transform:  translateX(50%) scaleX(0.00000001)
+    transition: all 1s
+    z-index: 200
+    text-align: right
+
+.sub-menu li
+    position: relative
+
+.menu-item
+    transition: all 0.5s
+    background-color: $cl-white
+    padding-right: .2rem
+
+
+.menu-link:hover
+    transition: all 0.5s
+    color: $cl-prin
+
+.a-text:hover
+    color: $cl-prin
+    transition: all 0.5s
+
+.items-menu:hover > .sub-menu
+    display: block
+    transition: all 0.5s
+    transform: scaleX(1)
+
+.menu-link
+    width: 100%
+    color: gray
+    font-family: $ft-prin
+    font-size: .8rem
+    padding-right: .2rem
+
+.menu-item-ctn-dtp
+    display: none
+    @include mq($mw-1024)
+        height: 3.5rem
+        display: flex
+        position: relative
+
+.items-menu-ctn-dtp
+    display: none
+    @include mq($mw-1024)
+        width: 100%
+        height: 100%
+        @include df(row,flex-end,center)
+        margin-right: .5rem
+        margin-bottom: 0
+        position: relative
+        z-index: 250
+
+.sub-menu-dtp
+    display: none
+    @include mq($mw-1024)
+        width: 7.3rem
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 2.7rem
+        background-color: $cl-white
+        z-index: 250
+        transition: all .5s
+        transform: translateY(-50%) scaleY(0.0000000001)
+        right: -.5rem
+
+.items-menu-dtp:hover > .sub-menu-dtp
+    transform: scaleY(1)
+    z-index: 250
+
+.items-menu-dtp
+    display: block
+    @include mq($mw-1024)
+        display: flex
+        margin: 0 .5rem
+        z-index: 200
+
+.items-menu-ctn-dtp:nth-child(1)
+    @include mq($mw-1024)
+        margin-left: 0
+
+.sub-menu-dtp:last-child
+    padding-bottom: .5rem
+    border-bottom: 3px solid $cl-prin
+
+.menu-item-dtp
+    @include mq($mw-1024)
+        padding-top: .2rem
+        text-align: center
+        z-index: 250
+
+.a-text-dtp
+    padding: 1rem 0
+
+.menu-link-dtp
+    color: $cl-gray
+    font-family: $ft-prin
+    font-size: .8rem
+    transition: all .5s
+
+.a-text-dtp
+    font-family: $ft-prin
+    color: $cl-gray
+    transition: all .5s
+
+.icon-user-noimg, .icon-user-noimg2
+    width: 1.8rem
+    height: 1.8rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $cl-prin
+    margin-right: .2rem
+    @include mq($mw-1024)
+        margin-right: 0
+
+.icon-user-noimg2, .img-user2
+    @include mq($mw-1024)
+        display: none
+
+.icon-user-noimg .icon-user, .icon-user-noimg2 .icon-user
+    color: $cl-white
+
+.img-user, .img-user2
+    margin-right: .2rem
+    width: 1.8rem
+    height: 1.8rem
+    border-radius: 50%
+    @include mq($mw-1024)
+        margin-right: 0
+        position: relative
+        z-index: 250
+
+.menu-link-dtp:hover, .a-text-dtp:hover
+    transition: all .5s
+    color: $cl-prin
+
+.login-navbar
+    font-family: $ft-prin
+    color: $cl-gray
+    font-size: 1rem
+    letter-spacing: 1px
+    font-weight: 500
+    border-radius: 4px
+    padding:  0 .5rem
+    @include mq($mw-1024)
+        cursor: pointer
+
+//Fin Navbars
+
+//Banderas
+
+.ng-select-container
+    width: 2.2rem !important
+    height: 2rem !important
+    background: transparent !important
+    border: none !important
+
+.ng-select .ng-select-single .ng-select-container
+    height: 2rem !important
+
+.ng-select, .ng-select-single, .ng-select-searchable, .ng-select-clearable
+    height: 2rem !important
+
+.ng-select.ng-select-single .ng-select-container,
+.ng-select-container:focus
+    box-shadow: none !important
+
+.ng-clear-wrapper, .ng-arrow-wrapper
+    display: none !important
+
+.ng-option, .ng-option-selected, .ng-option-marked, .ng-dropdown-panel
+    width: 2.2rem !important
+    height: 1.8rem !important
+    padding: 0 !important
+
+.ng-dropdown-panel
+    text-align: center !important
+    border: none !important
+
+.ng-input, .ng-select .ng-select-container
+    padding: 0 !important
+    justify-content: flex-start !important
+    align-items: flex-start !important
+
+.ng-value-container
+    padding-left: 4px !important
+    padding-top: 2px !important
+    text-align: center !important
+
+.ng-input
+    caret-color: transparent !important
+
+//Fin banderas
+
+//Botones google maps display none
+.gmnoprint, .gm-control-active, .gm-fullscreen-control
+    display: none !important
+
+//Fin Botones google maps display none
+
+//Panel viajes padre
+// .panel__viajes-padre-ctn
+//     width: 100%
+//     background-color: transparent
+//     overflow: hidden
+//     padding-bottom: 1rem
+//     position: relative
+//     top: -3rem
+//     z-index: 150
+
+// .sub-panel__viajes-ctn
+//     width: 90%
+//     margin: 0 auto
+//     background-color: $cl-prin
+//     padding-bottom: .5rem
+//     border-radius: 4px
+//     @include mq($mw-992)
+//         width: 80%
+//         display: grid
+//         grid-template-rows: 5rem
+//         grid-template-columns: repeat(2,1fr)
+
+// app-headerpanelviajes
+//     @include mq($mw-992)
+//         grid-column: 1/3
+
+.panel__viajes-padre-ctn
+    width: 100%
+    background-color: transparent
+    position: relative
+    top: -2.5rem
+    z-index: 150
+    @include mq($mw-768)
+        width: 90%
+        margin: 0 auto
+    @include mq($mw-992)
+        width: 80%
+
+        
+.sub-panel__viajes-ctn
+    width: 100%
+    background-color: #e6e6e6
+    padding-bottom: 1rem
+
+    
+.btn-continuar-ctn
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.btn-panel-continuar
+    width: 9rem
+    height: 2.5rem
+    background-color: $cl-prin
+    color: $cl-white
+    border: none
+    border-radius: 6px
+    font-family: $ft-prin
+    font-size: 1.2rem
+    font-weight: 600
+    @include mq($mw-1024)
+    transition: all .5s ease-in
+    &:hover
+        background-color: #006e4a
+        transition: all .5s ease-in
+
+.ngb-tp-spacer, .chevron, .ngb-tp-chevron
+    color: #ffffff !important
+
+.ngb-tp-spacer:focus, .chevron:focus, .ngb-tp-chevron:focus, .btn:focus, .btn-link:focus
+    outline: none !important
+    box-shadow: none !important
+
+.form-control:focus, .form-control::selection
+    outline: none !important
+    box-shadow: none !important
+    border: none !important
+
+.otracosa
+    width: 8.7rem !important
+
+.ngb-dp-navigation-chevron, .ngb-dp-weekday
+    color: $cl-prin !important
+
+.ng-star-inserted .bg-primary
+    background-color: $cl-prin !important
+
+
+.ngb-tp-chevron
+    transition: all .5s ease-in !important
+
+.ngb-tp-chevron
+    @include mq($mw-1024)
+    &:hover
+        transition: all .5s ease-in !important
+        color: #006e4a !important
+
+
+
+//Fin Panel viajes padre
+
+//Inicio barra progreso
+
+.barra-progreso-peq, .barra-progreso-med, .barra-progreso-gran, .barra-progreso-max,.barra-progreso-33, .barra-progreso-66
+    height: .1rem
+    background-color: $cl-prin
+    position: relative
+    top: 3.5rem
+
+.barra-progreso-peq
+    width: 25%
+
+.barra-progreso-33
+    width: 33.3%
+
+.barra-progreso-med
+    width: 50%
+
+.barra-progreso-66
+    width: 66.6%
+
+.barra-progreso-gran
+    width: 75%
+
+.barra-progreso-max
+    width: 100%
+
+//Fin barra progreso

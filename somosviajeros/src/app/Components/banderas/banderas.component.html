@@ -1,0 +1,14 @@
+
+<ng-select [items]="idiomas"           
+           (change)="onChangeSelect($event)"
+           bindLabel="name"
+           bindValue="id"
+           [(ngModel)]="selectedAccount"
+>
+    <ng-template ng-label-tmp let-item="item">
+        <img height="25" width="25" [src]="item.url"/>                
+    </ng-template>
+    <ng-template ng-option-tmp let-item="item" let-index="index" readonly=true >
+        <img height="25" width="25" [src]="item.url"/>        
+    </ng-template>
+</ng-select>

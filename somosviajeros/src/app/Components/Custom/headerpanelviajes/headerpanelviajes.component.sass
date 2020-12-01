@@ -1,0 +1,99 @@
+@import "../../../../variables"
+
+// .header-panel__viajes-ctn
+//   width: 90%
+//   margin: .5rem auto
+//   background-color: $cl-sec
+//   border-radius: 4px 4px 0 0
+//   border-bottom: 1px solid $cl-white
+//   padding-top: .5rem
+//   padding-bottom: .2rem
+
+// .panel__viajes-header
+//   width: 100%
+//   @include df(row,space-between)
+//   @include mq($mw-480)
+//     justify-content: space-around
+
+// .btn-panel__viajes
+//   width: 5rem
+//   height: 1.8rem
+//   border: 2px solid $cl-prin
+//   border-radius: 4px 4px 0 0
+//   font-family: $ft-prin
+//   font-size: .8rem
+//   background-color: transparent
+//   color: $cl-white
+
+//   @include mq($mw-480)
+//     width: 6rem
+//   @include mq($mw-768)
+//     letter-spacing: 1px
+//     font-size: 1rem
+//     width: 7rem
+
+// .btn-panel__viajes:focus
+//   outline: none
+
+// .ida-btn
+//   border-right: 2px solid $cl-white
+//   border-left: 2px solid $cl-white
+//   padding:  0 .5rem
+//   @include mq($mw-480)
+//     padding: 0 1rem
+// .ida-btn.active, .ida-vuelta-btn.active, .multi-btn.active
+//   border-bottom: 2px solid $cl-white
+
+.header-panel__viajes-ctn
+    width: 100%
+    height: 3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 1rem
+    margin-bottom: 1rem
+    @include mq($mw-580)
+        justify-content: start
+        padding-left: 3%
+
+.panel__viajes-header
+    width: 90%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include mq($mw-580)
+        width: 60%
+    @include mq($mw-768)   
+        width: 50%
+    @include mq($mw-992)
+        width: 40%
+
+.btn-panel__viajes
+    width: 7rem
+    height: 2rem
+    border: none
+    background-color: $cl-gray
+    font-family: $ft-prin
+    color: $cl-white
+    font-weight: 500
+    font-size: .9rem
+    border-radius: 4px
+    @include mq($mw-1024)
+    transition: all .3s ease-in
+    &:hover
+        background-color: #006e4a
+        transition: all .3s ease-in
+
+.btn-panel__viajes:focus
+    outline: none
+
+.ida-btn
+    margin: 0 .5rem
+
+.ida-btn.active, .ida-vuelta-btn.active, .multi-btn.active
+    background-color: $cl-prin
+    @include mq($mw-1024)
+    transition: all .3s ease-in
+    &:hover
+        background-color: #006e4a
+        transition: all .3s ease-in

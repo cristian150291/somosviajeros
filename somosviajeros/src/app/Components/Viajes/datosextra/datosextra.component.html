@@ -1,0 +1,84 @@
+<app-NavBar></app-NavBar>
+<div class="ctn-tam">
+    <div class="extras-ctn">
+        <div class="title-prin-extras-ctn">
+            <h2 class="title-extras">{{ 'DatosExtra.title' | translate }}</h2>
+        </div>
+        <main class="cont-extra-ctn">
+            <form class="text-extra-ctn">
+                <textarea [(ngModel)]="nota2" name="comentario" id="comentario" cols="30" rows="10" class="text-extra" placeholder="{{'DatosExtra.comentarios' | translate}}" #nota ></textarea>
+            </form>
+            <div class="items-extra-ctn">
+
+                <!-- <div class="equipaje-extra-ctn">
+
+                     <h4 class="equipaje-title">Equipaje</h4>
+                     <div class="equipaje-ctn">
+                         <select name="equipaje" id="equipaje" class="equipaje-select">
+                             <option value="mano" class="opt-prueba">Mano</option>
+                             <option value="chico" class="opt-prueba">Chico</option>
+                             <option value="grande" class="opt-prueba">Grande</option>
+                         </select>
+                         <span class="icon-circle-down pos"></span>
+                     </div>
+
+
+                     <input type="number" placeholder="Cantidad de equipaje" class="input-equipaje">
+                 </div>
+                 <div class="sep-extra"></div>
+                 <div class="vehiculo-extra-ctn">
+                     <h4 class="vehiculo-title">Vehículo</h4>
+                     <select name="vehiculo" id="vehiculo" class="vehiculo-select">
+                         <option value="combi">Combi</option>
+                         <option value="mini">MiniBus</option>
+                         <option value="bus">Colectivo</option>
+                     </select>
+                 </div>
+                 <div class="sep-extra"></div>
+                 <div class="comodidades-extra-ctn">
+                     <h4 class="comodidades-title">Comodidades</h4>
+                     <select name="comodidades" id="comodidades" class="comodidades-select">
+                         <option value="aire">Aire acondicionado</option>
+                         <option value="wifi">Wifi</option>
+                         <option value="butaca">Asientos rebatibles</option>
+                         <option value="cargadores">Cargadores usb</option>
+                         <option value="pantalla">Pantalla</option>
+                         <option value="banio">Baño</option>
+                     </select>
+                 </div>-->
+                <mat-accordion class="prueb">
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                         (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-description>
+                                <h3 class="ext-box-title">{{'DatosExtra.equipaje' | translate}}</h3>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="extra-equip-items-ctn">
+                            <div class="items-equip-ctn">
+                                <h5 class="title-item">{{'DatosExtra.mano' | translate}}</h5>
+                                <input type="number" placeholder="{{'DatosExtra.cantidad' | translate}}" class="numb-extra-item">
+                            </div>
+                            <div class="items-equip-ctn">
+                                <h5 class="title-item">{{'DatosExtra.pequenio' | translate}}</h5>
+                                <input type="number" placeholder="{{'DatosExtra.cantidad' | translate}}" class="numb-extra-item">
+                            </div>
+                            <div class="items-equip-ctn">
+
+                                <h5 class="title-item">{{'DatosExtra.mediano' | translate}}</h5>
+                                <input type="number" placeholder="{{'DatosExtra.cantidad' | translate}}" class="numb-extra-item">
+                            </div>
+                            <div class="items-equip-ctn">
+                                <h5 class="title-item">{{'DatosExtra.grande' | translate}}</h5>
+                                <input type="number" placeholder="{{'DatosExtra.cantidad' | translate}}" class="numb-extra-item">
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+            <div class="btn-env-extra-ctn">
+                <button class="inicio" type="button" (click)="nextPage()">{{'DatosExtra.btn-continuar' | translate}}</button>
+            </div>
+        </main>
+    </div>
+</div>

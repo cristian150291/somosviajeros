@@ -1,0 +1,8 @@
+<div class="header-panel__viajes-ctn">
+    <header class="panel__viajes-header">
+        <button class="btn-panel__viajes ida-vuelta-btn" type="button" (click)="selectiIdaVuelta($event)" [class.active]="isActiveidv">{{ 'HeaderPanelViajes.idayvuelta' | translate }}</button>
+        <button class="btn-panel__viajes ida-btn" type="button" (click)="selectIda($event)" [class.active]="isActiveid">{{ 'HeaderPanelViajes.soloida' | translate }}</button>
+        <button class="btn-panel__viajes multi-btn" type="button" (click)="selectMultipunto($event)" [class.active]="isActivem">{{ 'HeaderPanelViajes.multi' | translate }}</button>
+    </header>
+    
+</div>

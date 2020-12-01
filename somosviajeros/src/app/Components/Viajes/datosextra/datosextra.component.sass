@@ -1,0 +1,199 @@
+@import "../../../../variables"
+
+.extras-ctn
+  width: 100%
+  margin-top: 1rem
+  padding-bottom: 1rem
+
+.title-prin-extras-ctn
+  width: 100%
+  margin-bottom: 1rem
+
+.title-extras
+  font-family: $ft-prin
+  font-size: 1.1rem
+  letter-spacing: 1px
+  font-weight: 700
+  padding-left: 1rem
+  @include mq($mw-992)
+    font-size: 1.5rem
+    text-align: center
+    padding-left: 0
+
+.cont-extra-ctn
+  width: 100%
+
+.text-extra-ctn
+  width: 100%
+  display: flex
+  flex-direction: column
+  margin-bottom: 1rem
+
+
+.text-extra
+  width: 95%
+  margin: 0 auto
+  padding-top: .2rem
+  padding-left: .5rem
+  font-family: $ft-prin
+  letter-spacing: 1px
+  color: $cl-gray
+  border: none
+  background-color: $cl-white
+  border-radius: 4px
+  @include mq($mw-992)
+    width: 60%
+
+
+.text-extra:focus
+  outline: thin solid $cl-prin
+  border-radius: 4px
+
+textarea
+  resize: none
+
+.btn-env-extra-ctn
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.env-extra
+  width: 7rem
+  height: 2.5rem
+  border: none
+  background-color: $cl-prin
+  color: $cl-white
+  font-family: $ft-prin
+  border-radius: 4px
+  letter-spacing: 1px
+  font-weight: 600
+
+.items-extra-ctn
+  width: 95%
+  background-color: $cl-white
+  margin: 0 auto 1rem
+  padding: 1rem .5rem
+  border-radius: 6px
+  @include mq($mw-992)
+    width: 60%
+
+.prueb
+  width: 60%
+
+.ext-box-title
+  font-family: $ft-prin
+  font-weight: bold
+  font-size: .95rem
+  padding-top: 6px
+  @include mq($mw-768)
+    text-align: center
+
+.equipaje-extra-ctn
+  width: 100%
+
+.icon-briefcase
+  color: $cl-prin
+
+.extra-equip-items-ctn
+  display: flex
+  flex-direction: column
+  @include mq(650px)
+    justify-content: space-around
+    flex-direction: row
+
+.items-equip-ctn
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  align-self: center
+  justify-items: center
+  margin-bottom: .4rem
+  padding-bottom: .2rem
+  border-bottom: 1px solid $cl-ter
+  @include mq(650px)
+    display: flex
+    justify-content: space-around
+    align-items: center
+    border-bottom: none
+    border-right: 1px solid $cl-ter
+
+.items-equip-ctn:first-child
+  @include mq($mw-768)
+    border-left: 1px solid $cl-ter
+
+.title-item
+  font-family: $ft-prin
+  margin: 0 2rem 0 0
+  position: relative
+  font-size: 1rem
+  grid-column: 1/2
+  width: 4rem
+  color: $cl-gray
+  text-align: center
+
+
+//.title-item:before
+//  content: ''
+//  position: absolute
+//  width: 1.2rem
+//  height: 1.2rem
+//  border: 1px solid gray
+//  right: -1.5rem
+//  top: 1px
+//  border-radius: 3px
+
+
+//[type="checkbox"]
+//  display: none
+
+//input[type="checkbox"]:checked + .title-item:before
+//  content: '\ea10'
+//  font-family: icomoon
+//  border-color: $cl-prin
+//  font-size: 1rem
+//  line-height: 1
+//  color: $cl-prin
+
+.numb-extra-item
+  grid-column: 2/3
+  width: 5rem
+  height: 1.8rem
+  text-align: center
+  border-radius: 3px
+  border: 1px solid  $cl-prin
+  @include mq(650px)
+    width: 4rem
+  @include mq($mw-768)
+    width: 5rem
+  @include mq($mw-1024)
+    transition: all .3s ease-in
+    &:hover
+      background-color: $cl-ter
+      transition: all .3s ease-in
+
+.numb-extra-item:focus
+  outline: none
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  appearance: none
+
+
+input[type=number]
+  -moz-appearance: textfield
+
+.mat-accordion
+  width: 5rem !important
+
+.mat-expansion-panel
+  width: 100% !important
+
+.mat-expansion-panel-header
+  padding: 0 5px !important
+  @include mq($mw-768)
+    padding: 0 2rem !important
+
+.mat-expansion-panel-header-description
+  @include mq($mw-768)
+    text-align: center !important

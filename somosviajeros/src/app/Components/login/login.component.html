@@ -1,0 +1,26 @@
+<form action="" class="form-ctn" name="loginForm" #loginForm="ngForm"  (ngSubmit)="onSubmit(loginForm)">
+    <div class="title-ctn">
+        <h3 class="form-title">{{"Login-title" | translate}}</h3>
+    </div>
+
+
+    <div class="inputs-ctn">      
+        <div class="input-ctn">
+            <input type="email" name="email" class="input-login-modal" id="email" #email="ngModel" [(ngModel)]="login.email"
+            placeholder="{{'Login-mail' | translate}}" autocomplete="off" required>
+        </div>
+        <div class="input-ctn">
+            <input type="password" name="pass" class="input-login-modal password" id="pass" #pass="ngModel" [(ngModel)]="login.pass"
+            placeholder="{{'Login-pass' | translate}}" autocomplete="off" required>
+        </div> 
+                       
+        <div class="btn-ctn">
+            <button type="submit" class="inicio" [disabled]="!loginForm.form.valid">{{"Login-btns.btn1" | translate}}</button>
+            <span class="sub-title" (click)="olvPass()" >{{"Login-btns.btn2" | translate}}</span>
+            <button type="button" class="registrarse" (click)="onRegister()">{{"Login-btns.btn3" | translate}}</button>
+            <button type="button" class="login-rs Goo" (click)="signInWithGoogle()"><div  class="logo-rs ico-goo"></div> <span class="texto-rs">{{"Login-btns.btn4" | translate}}</span></button>
+            <button type="button" class="login-rs FB" (click)="signInWithFB()"><div  class="logo-rs ico-fb"></div> <span class="texto-rs">{{"Login-btns.btn5" | translate}}</span> </button>
+        </div>
+    </div>    
+</form>
+

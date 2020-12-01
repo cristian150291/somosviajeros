@@ -1,0 +1,230 @@
+@import "../../../../variables"
+
+.map-confirm-ctn
+  width: 100%
+  height: 13rem
+  position: relative
+  @include mq($mw-1024)
+    height: 17rem
+  @include mq($mw-1280)
+    height: 19rem
+agm-map
+  width: 100%
+  height: 100%
+  z-index: 50
+
+.det-confirm-ctn
+  width: 90%
+  margin: 0 auto
+  position: relative
+  background-color: $cl-white
+  top: -2rem
+  border: 2px solid $cl-prin
+  border-radius: 6px
+  @include mq($mw-1280)
+    width: 70%
+
+.title-confirm-ctn
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 1rem 0 0
+
+.title-confirm
+  font-family: $ft-prin
+  font-size: 1.2rem
+  font-weight: 700
+  letter-spacing: 1px
+
+.body-confirm-ctn
+  width: 100%
+
+.card-viajes-confirm-ctn
+  width: 100%
+  margin-bottom: .7rem
+
+
+.card-title-ctn
+  width: 100%
+  display: flex
+  align-items: center
+
+.icon-radio-unchecked, .icon-location
+  font-size: .6rem
+  font-weight: 700
+  padding-left: .5rem
+  position: relative
+  top: 1px
+  padding-right: .8rem
+  color: $cl-prin
+
+.icon-location
+  font-size: .9rem
+  padding-left: .3rem
+  padding-right: .6rem
+
+
+.card-title
+  font-family: $ft-prin
+  letter-spacing: 1px
+  font-size: .9rem
+
+.icon-pencil
+  padding-left: .5rem
+  color: $cl-prin
+  font-size: .8rem
+  position: relative
+  font-weight: 700
+
+.card-cities-ctn, .card-date-ctn
+  width: 100%
+  display: flex
+  align-items: center
+  margin-top: .5rem
+
+.icon-stop_circle
+  font-size: .4rem
+  padding-left: .6rem
+  padding-right: .8rem
+  color: $cl-prin
+
+.card-cities
+  font-family: $ft-prin
+  font-size: 1rem
+  font-weight: 700
+  letter-spacing: 1px
+  display: flex
+  align-items: center
+
+
+
+.icon-arrow-right2, .icon-arrow-left2
+  padding: 0 .5rem
+  color: $cl-prin
+
+.card-date
+  font-family: $ft-prin
+  font-size: .7rem
+  color: $cl-gray
+
+.card-hours-ctn
+  width: 100%
+  margin-top: 1px
+
+.card-hours
+  padding-left: 1.8rem
+  font-family: $ft-prin
+  font-size: .7rem
+  color: $cl-gray
+
+.card-notes-ctn
+  width: 100%
+  background-color: $cl-sec
+  margin-bottom: 1rem
+  @include mq($mw-1280)
+    min-height: 10rem
+
+.card-notes-title-ctn
+  padding-top: .5rem
+  padding-left: .8rem
+
+.card-notes-title
+  font-family: $ft-prin
+  font-size: 1rem
+  font-weight: 700
+  letter-spacing: 1px
+
+.card-notes
+  width: 100%
+  font-family: $ft-prin
+  font-size: .9rem
+  letter-spacing: .5px
+  padding: .5rem .5rem .5rem .8rem
+  @include mq($mw-1280)
+    padding: 1rem 1rem 0 1.3rem
+
+.footer-confirm-ctn
+  width: 90%
+  margin: 0 auto 1rem
+  display: flex
+  justify-content: center
+  @include mq($mw-480)
+    justify-content: center
+
+.btns-edit-ctn
+  width: 7rem
+  margin-right: .5rem
+
+.btns-confirm-ctn
+  width: 11rem
+
+.btn-edit, .btn-confirm
+  width: 100%
+  height: 2.5rem
+  font-family: $ft-prin
+  font-size: .9rem
+  border: none
+  border-radius: 4px
+
+.btn-edit:focus, .btn-confirm:focus
+  outline: none
+
+.btn-edit
+  border: 2px solid $cl-prin
+  color: $cl-prin
+  font-weight: bold
+  @include mq($mw-1024)
+    transition: all .5s ease-in
+    &:hover
+      background-color: $cl-prin
+      color: $cl-white
+      transition: all .5s ease-in
+
+.btn-confirm
+  background-color: $cl-prin
+  color: $cl-white
+  font-weight: bold
+  border: 2px solid $cl-prin
+  @include mq($mw-1024)
+    transition: all .5s ease-in
+    &:hover
+      background-color: #006e4a
+      transition: all .5s ease-in
+
+.date-confirm-ctn, .pasajeros-confirm-ctn, .trans-type-ctn
+  width: 100%
+  margin-bottom: .5rem
+
+.date-title-prin, .pasajeros-title, .trans-type-title-prin
+  font-family: $ft-prin
+  font-size: .9rem
+  padding-left: 1rem
+  font-weight: bold
+  letter-spacing: 1px
+  display: flex
+  align-items: center
+
+.trans-type-ctn
+  margin-bottom: 1rem
+
+.icon-calendar, .icon-groups, .icon-directions_bus
+  margin-left: .5rem
+  color: $cl-prin
+
+.icon-groups
+  font-size: 1.2rem
+
+.icon-directions_bus
+  font-size: 1.1rem
+
+.date-title-sub, .trans-type-title-sub
+  font-family: $ft-prin
+  font-size: .7rem
+  padding-left: 1rem
+  color: $cl-gray
+
+.confirm-sep
+  width: 100%
+  margin: 1rem auto
+  border-bottom: 1px solid $cl-ter

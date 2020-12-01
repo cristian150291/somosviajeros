@@ -1,0 +1,96 @@
+<div class="ctn-panel">
+    <div *ngIf="verPersona" class="panel-personas-ctn" >
+        <div class="panel-people">
+            <input class="people-input" placeholder="{{ 'PanelViajes.pasajeros' | translate }}" type="number" [(ngModel)]="ngModelCountPasajeros">
+            <span class="icon-users"></span>
+            <div class="text-error-ctn" *ngIf="errorCountPasajeros != ''">
+                <span class="text-error">{{errorCountPasajeros}}</span>
+            </div>
+        </div>
+    </div>
+    <!-- <header class="panel-header-ctn">       
+        <div class="panel-header-card-sup">
+            <p class="header-card-title">{{titleMenuChico}}</p>
+            <span *ngIf="titleMenuChanges" class="icon-compare_arrows"></span>
+            <span *ngIf="!titleMenuChanges" class="icon-arrow-right"></span>
+        </div>
+    </header> -->
+    <main class="panel-main-ctn">
+        
+        <div class="panel-input-ciudad">
+            <div class="text-error-ctn" *ngIf="errorCiudad != ''">
+                <span class="text-error2">{{errorCiudad}}</span>
+            </div>
+            <input (blur)="beforeFocus()" #inputGoogle class="panel-input" placeholder="{{title}}" ngx-google-places-autocomplete #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+<!--            <input type="text" placeholder="{{title}}" class="panel-input">-->
+            <span class="icon-location"></span>
+        </div>
+
+        <div class="panel-buttons-ctn">
+            <div class="title-panel-fecha">
+                <h5 class="title-fecha">{{ 'PanelViajes.fecha' | translate }}</h5>
+            </div>
+            <div  class="fechas-ctn">
+                <div class="text-error-ctn2" *ngIf="errorFecha != ''">
+                    <span class="text-error2">{{errorFecha}}</span>
+                </div>
+                <div class="text-error-ctn2" *ngIf="errorHora != ''">
+                    <span class="text-error2">{{errorHora}}</span>
+                </div>
+                <div class="panel-date">
+                    <input #disFecha class="form-control otracosa" placeholder="{{ 'PanelViajes.dd-mm-aaaa' | translate }}"
+                           name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+
+                    <div class="input-group-append">
+                        <button #disBtn class="btn-calendar icon-calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                </div>
+
+
+                <div class="panel-hours">
+
+                    <ngb-timepicker #disHora  [(ngModel)]="time"></ngb-timepicker>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    
+</div>
+
+
+<!-- <div class="ctn-panel">
+    <header class="panel-header-ctn">
+        <div class="panel-header-card-sup">
+            <p class="header-card-title">{{titleMenuChico}}</p>
+            <span *ngIf="titleMenuChanges" class="icon-compare_arrows"></span>
+            <span *ngIf="!titleMenuChanges" class="icon-arrow-right"></span>
+        </div>
+        <h5 class="panel-header-title">{{title}}</h5>
+    </header>
+    <main class="panel-main-ctn">
+        <div class="sep-panel-sup"></div>
+        <div class="panel-input-ciudad">
+            <input type="text" placeholder="Seleccione ciudad de origen" class="panel-input">
+        </div>
+        <div *ngIf="verPersona" class="panel-personas-ctn">
+            <div class="panel-people">
+                <button class="people-btn" type="button"  >Personas</button>
+            </div>
+        </div>
+        <div class="panel-buttons-ctn">
+            <div class="panel-date">
+                <button class="temporal" type="button" #disFecha>Fecha</button>
+            </div>
+            <div class="panel-hours">
+                <button class="temporal" type="button" #disHora>Hora</button>
+            </div>
+        </div>
+        <div *ngIf="btnFooter" class="panel-footer-enviar-ctn">
+            <button class="panel-btn-env">Enviar</button>
+        </div>
+    </main>
+
+    <div class="panel-divisor"></div>
+</div> -->

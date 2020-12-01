@@ -1,0 +1,105 @@
+<app-NavBar #refNavBar 
+    (loginSuccess)="successLogin($event)"
+></app-NavBar>
+<div class="ctn-tam">
+    <div class="map-confirm-ctn">
+
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-direction *ngFor="let item of marker"
+              [origin]="item.origin"
+              [destination]="item.destination"
+          >
+          </agm-direction>
+        </agm-map>
+
+    </div>
+    <main class="det-confirm-ctn">
+        <header class="title-confirm-ctn">
+            <h4 class="title-confirm">{{'ConfirmarDatos.title' | translate}}</h4>
+        </header>
+        <div class="confirm-sep"></div>
+        <main class="body-confirm-ctn">
+            <div class="card-viajes-confirm-ctn">
+                <div class="card-title-ctn">
+                    <div class="icon-radio-unchecked"></div>
+                    <h5 class="card-title">{{'ConfirmarDatos.inicio' | translate}}</h5>
+                </div>
+                <div class="card-cities-ctn">
+                    <div class="icon-stop_circle"></div>
+                    <h5 class="card-cities">{{data[0].viaje[0].ciudad}} <span class="icon-arrow-right2"></span></h5>
+                </div>
+                <div class="card-date-ctn">
+                    <div class="icon-stop_circle"></div>
+                    <h5 class="card-date"> {{ getHourFecha(data[0].viaje[0].fecha).getFecha() }} </h5>
+                </div>
+                <div class="card-hours-ctn">
+                    <h5 class="card-hours">{{ 'ConfirmarDatos.salida' | translate }} {{getHourFecha().getHora(data[0].viaje[0].hora)}}  </h5>
+                </div>
+            </div>
+            <div class="confirm-sep" *ngIf="sizeViaje > 2"></div>
+            <div class="card-viajes-confirm-ctn" *ngFor="let item of dataVintermedio;let i = index">
+                <div class="card-title-ctn">
+                    <div class="icon-radio-unchecked"></div>
+                    <h5 class="card-title">{{ 'ConfirmarDatos.parada' | translate }}{{i + 1}}</h5>
+                </div>
+                <div class="card-cities-ctn">
+                    <div class="icon-stop_circle"></div>
+                    <h5 class="card-cities">{{item.ciudad}}</h5>
+                </div>
+            </div>
+            <div class="confirm-sep"></div>
+            <div class="card-viajes-confirm-ctn">
+                <div class="card-title-ctn">
+                    <div class="icon-location"></div>
+                    <h5 class="card-title">{{ 'ConfirmarDatos.fin' | translate }}</h5>
+                </div>
+                <div class="card-cities-ctn">
+                    <div class="icon-stop_circle"></div>
+                    <h5 class="card-cities">{{data[0].viaje[sizeViaje].ciudad}} <span class="icon-arrow-left2"></span> </h5>
+                </div>
+                <div class="card-date-ctn">
+                    <div class="icon-stop_circle"></div>
+                    <h5 class="card-date"> {{getHourFecha(data[0].viaje[sizeViaje].fecha).getFecha()}} </h5>
+                </div>
+                <div class="card-hours-ctn">
+                    <h5 class="card-hours">{{ 'ConfirmarDatos.salida' | translate }} {{getHourFecha().getHora(data[0].viaje[sizeViaje].hora)}} </h5>
+                </div>
+            </div>
+            <div class="confirm-sep"></div>
+            <div class="card-notes-ctn">
+                <div class="card-notes-title-ctn">
+                    <h5 class="card-notes-title">{{ 'ConfirmarDatos.comentarios' | translate }}</h5>
+                </div>
+                <div class="card-notes">
+                    <p>{{data[0].nota}}</p>
+                </div>
+            </div>
+        </main>
+        <div class="confirm-sep"></div>
+        <section class="date-confirm-ctn">
+            <h4 class="date-title-prin">3 días y 2 noches <span class="icon-calendar"></span></h4>
+            <h5 class="date-title-sub">{{ 'ConfirmarDatos.tiempo' | translate }}</h5>
+        </section>
+        <div class="confirm-sep"></div>
+        <section class="pasajeros-confirm-ctn">
+            <h4 class="pasajeros-title">{{data[0].pasajeros}} {{ 'ConfirmarDatos.pasajeros' | translate }} <span class="icon-groups"></span></h4>
+        </section>
+        <div class="confirm-sep"></div>
+<!--        <section class="trans-type-ctn">-->
+<!--            <h4 class="trans-type-title-prin">Minibus <span class="icon-directions_bus"></span></h4>-->
+<!--            <h5 class="trans-type-title-sub">{{ 'ConfirmarDatos.vehiculo' | translate }}</h5>-->
+<!--        </section>-->
+    </main>
+
+
+    <footer class="footer-confirm-ctn">
+        <div class="btns-edit-ctn">
+            <button (click)="editTravel()" class="btn-edit">{{ 'ConfirmarDatos.btn-edit' | translate }}</button>
+        </div>
+        <div class="btns-confirm-ctn">
+            <button class="btn-confirm" (click)="sendConfirmacion()">{{ 'ConfirmarDatos.btn-confirm' | translate }}</button>
+        </div>
+    </footer>
+
+</div>
+
